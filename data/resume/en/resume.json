@@ -274,7 +274,7 @@
       "projects": [
         {
           "name": "IOTA-node",
-          "description":  "CLI and TUI program that automates and manages IOTA nodes.",
+          "description":  "CLI and TUI program that automates and manages IOTA nodes",
           "skillsUsed": ["Bash", "daemons", "Linux", "IOTA"],
           "source": "https://github.com/nazarimilad/iota-node"
         }
@@ -285,9 +285,9 @@
       "projects": [
         {
           "name": "miladnazari.be",
-          "description":  "Personal website",
+          "description":  "Source code of personal website",
           "skillsUsed": ["HTML", "CSS", "JSON", "HUGO", "Apache"],
-          "source": ""
+          "source": "https://github.com/nazarimilad/miladnazari.be"
         },
         {
           "name": "spaceprint.be",
