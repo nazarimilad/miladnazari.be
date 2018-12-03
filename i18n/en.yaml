@@ -1,0 +1,22 @@
+- id: curriculumVitae
+  translation: "Curriculum vitae"
+- id: experience
+  translation: "experience"
+- id: education
+  translation: "education"
+- id: skillsAndKnowledge
+  translation: "skills and knowledge"
+- id: domain
+  translation: "Domain"
+- id: specific
+  translation: "Specific"
+- id: proficiencyLevel
+  translation: "Proficiency Level"
+- id: interests
+  translation: "interests"
+
+
+- id: description
+  translation: "Description"
+- id: skillsUsed
+  translation: "Skills learned/used"

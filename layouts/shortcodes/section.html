@@ -1,0 +1,6 @@
+<section {{ with .Get "id" }}id="{{.}}"{{ end }}>
+    {{ with .Get "id"}}
+        <h2>{{ upper . }}</h2>
+    {{ end }}
+    {{ .Inner }}
+</section>

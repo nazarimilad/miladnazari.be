@@ -1,0 +1,44 @@
+baseURL = "https://miladnazari.be/"
+Paginate = 10
+relativeURLs = true
+DefaultContentLanguage = "en"
+disableHugoGeneratorInject = true
+[params]
+    githubName = "nazarimilad"
+    linkedinName = "miladnazari"
+    description = "Personal website and blog"
+    currentWork = "Assistent teacher @CodeFever"
+[languages]
+    [languages.en]
+        baseURL = "https://miladnazari.be/"
+        title = "Milad Nazari"
+        weight = 1
+        [[languages.en.menu.main]]
+        identifier = "Cv"
+        url    = "/"
+        name   = "CV"
+        weight = 1
+        [[languages.en.menu.main]]
+        identifier = "projects"
+        url    = "/projects/"
+        name   = "Projects"
+        weight = 1
+        
+    [languages.nl]
+        baseURL = "https://nl.miladnazari.be/"
+        title = "Milad Nazari"
+        weight = 2
+        [languages.nl.params]
+            description = "Persoonlijke website en blog"
+            currentWork = "Assistent lesgever @CodeFever"
+        [[languages.nl.menu.main]]
+        identifier = "Cv"
+        url    = "/"
+        name   = "CV"
+        weight = 2
+        [[languages.nl.menu.main]]
+        identifier = "projecten"
+        url    = "/projecten/"
+        name   = "Projecten"
+        weight = 2
+

@@ -1,0 +1,312 @@
+{ 
+  "basics": {
+    "language": "en",
+    "name": "Milad Nazari",
+    "email": "&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#109;&#105;&#108;&#97;&#100;&#110;&#97;&#122;&#97;&#114;&#105;&#46;&#98;&#101;",
+    "website": "miladnazari.be",
+    "summary": "Studious and passionated computer science student @ Hogent",
+    "location": {
+      "countryCode": "BE",
+      "region": "East-Flanders"
+    },
+    "linkedin": "miladnazari",
+    "github": "nazarimilad"
+  },
+  "work": [
+    {
+      "company": "Codefever",
+      "position": "Assistant teacher",
+      "website": "codefever.be",
+      "startDate": "01-02-2018",
+      "endDate": "until now",
+      "location": "Gent",
+      "summary": "Assistant teacher. Teaching computational concepts, algoritmes and web development to children. Helping with Scratch and Minecraft Education exercices."
+    },
+    {
+      "company": "VPK Packaging",
+      "position": "Support engineer & automation",
+      "website": "vpkgroup.com",
+      "startDate": "01-08-2018",
+      "endDate": "31-08-2018",
+      "location": "Erembodegem",
+      "summary": "Technical support and data analysis automation with Powershell, C# and Visual Basic."
+    },
+    {
+      "company": "UZ Brussel",
+      "position": "Junior software engineer",
+      "website": "uzbrussel.be",
+      "startDate": "02-07-2018",
+      "endDate": "31-07-2018",
+      "location": "Brussel",
+      "summary": "Agile object oriented software engineering in Java for the development of the electronic patient record system Primuz. Usage of design patterns and several technologies such as Java EE, Hibernate, Vaadin, Maven, Jenkins and Hazelcast."
+    },
+    {
+      "company": "Spaceprint",
+      "position": "Full stack developer",
+      "website": "spaceprint.be",
+      "startDate": "01-06-2014",
+      "endDate": "01-06-2016",
+      "location": "Dendermonde",
+      "summary": "Development and maintenance of both front end and back and, SEO, DNS-management, social marketing and implementation of STL volumetry algorithms"
+    },
+    {
+      "company": "Github, Gitlab",
+      "position": "Open source developer",
+      "website": "github.com",
+      "startDate": "01-07-2014",
+      "endDate": "until now",
+      "location": "",
+      "summary": "Development and documentation of open source software. Contributions and bug reporting of open source projects on Github and Gitlab."
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Plazey",
+      "position": "Technical assistant",
+      "website": "https://www.plazey.be/",
+      "startDate": "2012-07-01",
+      "endDate": "2012-07-30"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University College Hogent",
+      "website": "hogent.be",
+      "logo": "assets/images/opleiding_hogent.png",
+      "area": "Applied computer science",
+      "studyType": "Professional bachelor",
+      "startDate": "2017",
+      "endDate": "until now"
+    },
+    {
+      "institution": "University UGent",
+      "website": "ugent.be",
+      "logo": "assets/images/opleiding_ugent.png",
+      "area": "Industrial computer science engineering",
+      "studyType": "Academic bachelor",
+      "startDate": "2014",
+      "endDate": "2017"
+    },
+    {
+      "institution": "Royal athena Dendermonde",
+      "website": "kad.be",
+      "logo": "assets/images/opleiding_koninklijke_atheneum_dendermonde.jpg",
+      "area": "Latin - Science",
+      "studyType": "Secundary onderwijs",
+      "startDate": "2008",
+      "endDate": "2014"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming languages",
+      "skillsets": [
+        {
+          "level": "Advanced",
+          "subskills": [
+            "Java",
+            "C#"
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "subskills": [
+            "Python"
+          ]
+        },
+        {
+          "level": "Basic knowledge",
+          "subskills": [
+            "C++",
+            "Perl"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Software engineering",
+      "skillsets": [
+        {
+          "level": "Advanced",
+          "subskills": [
+            "OOP",
+            "UML"
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "subskills": [
+            "Functional analysis",
+            "TDD",
+            "Git",
+            "Design patterns"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "System administration & DevOps",
+      "skillsets": [
+        {
+          "level": "Advanced",
+          "subskills": [
+            "Bash"
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "subskills": [
+            "Linux",
+            "Apache"
+            
+          ]
+        },
+        {
+          "level": "Basic knowledge",
+          "subskills": [
+            "Windows Server",
+            "Powershell"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Data analysis",
+      "skillsets": [
+        {
+          "level": "Advanced",
+          "subskills": [
+            "EERD",
+            "SQL",
+            "Transact-SQL",
+            "SQL Server"
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "subskills": [
+            "XML",
+            "MySQL"
+          ]
+        },
+        {
+          "level": "Basic knowledge",
+          "subskills": [
+            "Big Data",
+            "MongoDB",
+            "PowerBI",
+            "Pandas",
+            "Numpy",
+            "Scikit-Learn"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Web development",
+      "skillsets": [
+        {
+          "level": "Advanced",
+          "subskills": [
+            "HTML",
+            "CSS",
+            "Bootstrap"
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "subskills": [
+            "SaSS",
+            "Javascript",
+            "ASP.NET",
+            "Hugo"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Communication",
+      "skillsets": [
+        {
+          "level": "Advanced",
+          "subskills": [
+            "Dutch",
+            "French",
+            "English"
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "subskills": [
+            "Persian"
+          ]
+        },
+        {
+          "level": "Basic knowledge",
+          "subskills": [
+            "German"
+          ]
+        }
+      ]
+    }
+  ],
+  "interests": ["Computer Vision", "Machine Learning", "IOTA", "Data analysis", "Open source"],
+  "projects": [
+    {
+      "category": "Data analysis",
+      "projects": [
+        {
+          "name": "Instagram Downloader",
+          "description":  "Instagram data mining program for archiving and data analysis",
+          "skillsUsed": ["Java", "Design patterns", "Unit testing", "Maven"],
+          "source": ""
+        },
+        {
+          "name": "War over time",
+          "description":  "Renders and animates territorial changes in Syria and Iraq during the Syrian civil war",
+          "skillsUsed": ["Perl", "Selenium", "Imagemagick"],
+          "source": "https://github.com/nazarimilad/war-over-time"
+        }
+      ]
+    },
+    {
+      "category": "Automation",
+      "projects": [
+        {
+          "name": "IOTA-node",
+          "description":  "CLI and TUI program that automates and manages IOTA nodes.",
+          "skillsUsed": ["Bash", "daemons", "Linux", "IOTA"],
+          "source": "https://github.com/nazarimilad/iota-node"
+        }
+      ]
+    },
+    {
+      "category": "Web development",
+      "projects": [
+        {
+          "name": "miladnazari.be",
+          "description":  "Personal website",
+          "skillsUsed": ["HTML", "CSS", "JSON", "HUGO", "Apache"],
+          "source": ""
+        },
+        {
+          "name": "spaceprint.be",
+          "description":  "Website of start-up Spaceprint.be",
+          "skillsUsed": ["HTML", "CSS", "Bootstrap", "STL", "PHP", "MySQL"],
+          "source": "https://github.com/nazarimilad/spaceprint.be"
+        }
+      ]
+    },
+    {
+      "category": "Desktop",
+      "projects": [
+        {
+          "name": "Windows XP Simulator",
+          "description":  "JavaFX program that emulates nostalgic Windows XP experiences",
+          "skillsUsed": ["Java", "JavaFX"],
+          "source": "https://github.com/nazarimilad/WindowsXPsimulator"
+        }
+      ]
+    }
+  ]
+}

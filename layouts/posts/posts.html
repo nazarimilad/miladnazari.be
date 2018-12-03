@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+<body class="container">
+    {{ partial "sidebar.html" . }}
+    <div class="main">
+        <header>
+            <div class="website-only">
+                <div class="website-only">
+                    <h1>Curriculum vitae</h1>
+                </div>
+                <a href="https://miladnazari.be/Milad-Nazari.pdf" target="_blank" rel="noopener" class="btn website-only"><strong>.PDF</strong></a>
+            </div>
+        </header>
+        <section id="experience">
+            <h2>ERVARING</h2>
+            {{ range .Site.Data.Resume.work }}
+            <article>
+                <a href="http://{{ .website }}">
+                    <img src="/img/ervaring_{{ .website }}" alt="Logo {{ .company }}">
+                </a>
+                <div class="details">
+                    <h3>{{ .position }}</h3>
+                    <big>{{ .company }}</big>
+                    <p>{{ .startDate }} - {{ .endDate }} {{ if not .location }} </p> {{ else }} | {{ .location }} </p > {{ end }}
+                </div>
+                <p class="description">{{ .summary }}</p>
+            </article>
+            {{ end }}
+        </section>
+    </div>
+</body>
+
+</html>

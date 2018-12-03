@@ -1,0 +1,22 @@
+- id: curriculumVitae
+  translation: "Curriculum vitae"
+- id: experience
+  translation: "ervaring"
+- id: education
+  translation: "opleiding"
+- id: skillsAndKnowledge
+  translation: "vaardigheden en kennis"
+- id: domain
+  translation: "Domein"
+- id: specific
+  translation: "Specifiek"
+- id: proficiencyLevel
+  translation: "Kennisniveau"
+- id: interests
+  translation: "interesses"
+
+
+- id: description
+  translation: "Beschrijving"
+- id: skillsUsed
+  translation: "Gebruikte/geleerde vaardigheden"

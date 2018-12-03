@@ -1,0 +1,32 @@
+{{ with index .Site.Data.resume .Site.Language.Lang }}
+    {{ range .resume.projects }}
+    <section id="{{ .category }}" class="projectSection">
+        <h2>{{ upper .category }}</h2>
+        <div class="projects">
+                {{ range .projects }}
+                <div class="project">
+                    <div class="projectTitle">
+                        <h3>{{ .name }}</h3>
+                        {{ if .source }}
+                        <a class="sourceBtn" href="{{ .source }}">
+                            <i class="fa fa-github-alt"></i>
+                        </a>
+                        {{ end }}
+                    </div>
+                    <div class="projectDetails">
+                        <div>
+                            <strong>{{ i18n "description" }}:</strong>
+                            <p>{{ .description }}</p>
+                        </div>
+                        <div>
+                            <strong>{{ i18n "skillsUsed" }}:</strong>
+                            <p>{{ delimit .skillsUsed ", " }}</p>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+        </div>
+        
+    </section>
+    {{ end }}
+{{ end }}

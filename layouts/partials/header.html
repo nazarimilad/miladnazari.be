@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ .Param "description" }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ .Param "description" }}">
+    <meta name="theme-color" content="#0077b5">
+    {{ $mainStyle := resources.Get "css/main.css" | minify}}
+    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}" />
+    <link rel="canonical" href="https://miladnazari.be" />
+</head>

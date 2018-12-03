@@ -1,0 +1,129 @@
+{{ partial "header.html" . }}
+<body class="container">
+    {{ partial "sidebar.html" . }}
+    <div class="main">
+        {{ with index .Site.Data.resume .Site.Language.Lang }}
+        <header>
+            <div class="print-only">
+                <div>
+                    <figure>
+                        <img src="img/profile.jpg" alt="profile foto" id="profilePicture">
+                    </figure>
+                    <div>
+                        <h1>{{ .resume.basics.name }}</h1>
+                        <small>{{ .resume.basics.summary }}</small><br>
+                        <small><strong>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;{{ .resume.basics.email }}</small>
+                        <small><strong>Website&nbsp;&nbsp;:</strong>&nbsp;&nbsp;{{ .resume.basics.website }}</small>
+                        <small><strong>LinkedIn&nbsp;:</strong>&nbsp;&nbsp;linkedin.com/in/{{ .resume.basics.linkedin }}</small>
+                    </div>
+                </div>
+                <img src="img/qr-code.png" alt="qr-code website">
+            </div>
+            <div class="website-only">
+                <div class="website-only">
+                    <h1>LOOOOOLLLOLLLL</h1>
+                </div>
+                {{ if eq $.Site.Language.Lang "en" }}
+                    <a href="https://miladnazari.be/Milad-Nazari-{{ $.Site.Language.Lang }}.pdf" class="btn website-only" download><strong>.PDF</strong></a>
+                {{ else }}
+                    <a href="https://nl.miladnazari.be/Milad-Nazari-{{ $.Site.Language.Lang }}.pdf" class="btn website-only" download><strong>.PDF</strong></a>
+                {{ end }}
+            </div>
+        </header>
+        <section id="experience">
+            <h2>{{ upper (i18n "experience") }}</h2>
+            {{ range .resume.work }}
+            <article>
+                <a href="http://{{ .website }}">
+                    <img src="img/ervaring_{{ .website }}" alt="Logo {{ .company }}">
+                </a>
+                <div class="details">
+                    <h3>{{ .position }}</h3>
+                    <big>{{ .company }}</big>
+                    <p>{{ .startDate }} - {{ .endDate }} {{ if not .location }} </p> {{ else }} | {{ .location }} </p > {{ end }}
+                </div>
+                <p class="description">{{ .summary }}</p>
+            </article>
+            {{ end }}
+        </section>
+        <section id="education">
+            <h2>{{ upper (i18n "education") }}</h2>
+            <div id="cards">
+                {{ range .resume.education }}
+                <article>
+                    <div class="card">
+                        <a href="http://{{ .website }}">
+                            <img src="img/opleiding_{{ .website }}" alt="Logo {{ .institution }}">
+                        </a>
+                        <h3>{{ .area }}</h3>
+                        <big>{{ .institution }}</big>
+                        <p>{{ .startDate }} - {{ .endDate}}</p>
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+        </section>
+        <div class="page-break"></div>
+        <section id="skills">
+            <h2>{{ upper (i18n "skillsAndKnowledge") }}</h2>
+            <table>
+                <thead>
+
+                    <tr>
+                        <th id="domeinColumn">{{ i18n "domain" }}</th>
+                        <th id="specificationColumn">{{ i18n "specific" }}</th>
+                        <th id="knowledgeLevelColumn">{{ i18n "proficiencyLevel" }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- for each cateogory of skill -->
+                    {{ $.Scratch.Add "i" 0 }}
+                    {{ range .resume.skills }}
+                        {{ $scopeSkill := . }}
+                        {{ range first 1 .skillsets }}
+                            <tr>
+                                {{ with $scopeSkill }}
+                                    {{ $k := $.Scratch.Get "i" }}
+                                    {{ if eq ( mod $k 2 ) 0}}
+                                        <th rowspan="{{ len .skillsets }}" class="domain">{{ .category }}</th>
+                                    {{ else }}
+                                        <th rowspan="{{ len .skillsets }}">{{ .category }}</th>
+                                    {{ end }}
+                                {{ end }}
+                                <td>{{ delimit .subskills ", " }}</td>
+                                <td>{{ .level }}</td>
+                            </tr>
+                        {{ end }}
+                        {{ range after 1 .skillsets }}
+                            <tr>
+                                <td>{{ delimit .subskills ", " }}</td>
+                                <td>{{ .level }}</td>
+                            </tr>
+                        {{ end }}
+                        {{ $.Scratch.Add "i" 1 }}
+                    {{ end }}
+                </tbody>
+            </table>
+            {{ if ne .Site.Language.Lang "en" }}
+            <style>
+                @media (max-width : 537px) {
+                    td:nth-of-type(1):before { content: "{{ i18n "specific" }}" }
+                    td:nth-of-type(2):before { content: "{{ i18n "proficiencyLevel" }}" }
+                }
+            </style>
+            {{ end }}
+        </section>
+        <section id="interests">
+            <h2>{{ upper (i18n "interests") }}</h2>
+            <div>
+                {{ range .resume.interests }}
+                <div>{{ . }}</div>
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+    </div>
+    {{ partial "footer.html" . }}
+</body>
+
+</html>

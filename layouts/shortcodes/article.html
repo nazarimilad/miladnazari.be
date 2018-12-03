@@ -1,0 +1,28 @@
+<article>
+    
+    <div class="details">
+        
+        <div class="btn">
+
+                <div>
+                    <h3>
+                    {{ with .Get "nameProject"}}
+                        {{ . }}
+                    {{ end }}
+                    </h3>
+                    <div class="separator"></div>
+                    {{ with .Get "link"}}
+                    <a href="{{ . }}">
+                    {{ end }}
+                    <i class="fa fa-github-alt"></i>
+                    </a>
+                </div>
+        </div>
+    
+    </div>
+
+    {{ with .Get "descriptionProject"}}
+    <p class="description">{{ . }}</p>
+    {{ end }}
+
+</article>

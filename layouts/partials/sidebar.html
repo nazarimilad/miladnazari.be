@@ -1,0 +1,73 @@
+<nav class="website-only">
+        
+    <div>
+        <figure>
+            <picture>
+                <img src="/img/profile.jpg" alt="profile foto" id="profilePicture">
+            </picture>
+            <div class="desc">
+                {{ with index .Site.Data.resume .Site.Language.Lang }}
+                <figcaption>{{ .resume.basics.name }}</figcaption>
+                {{ end }}
+                <small>{{ .Param "currentWork" }}</small>
+            </div>
+        </figure>
+        {{ with index .Site.Data.resume .Site.Language.Lang }}
+        <div id="menu">
+            <ul>
+                {{ range $.Site.Menus.main }}
+                {{ if eq $.Kind "home" }}
+                    {{ $.Scratch.Set "active" ($.IsMenuCurrent "main" .) }}
+                {{ else }}
+                    {{ $.Scratch.Set "active" (or (eq .Identifier "projects") (eq .Identifier "projecten")) }}
+                {{ end }}
+                {{ $active := $.Scratch.Get "active" }}
+                <li>
+                    <a href="{{ .URL | absLangURL  }}">{{ .Name  }}</a>
+                    <div class="signet {{ if $active }}active{{end}}"></div>
+                </li>
+                {{ end  }}
+            </ul>  
+        </div>
+        <div id="contact">
+            <ul>
+                <li>
+                    <!--
+                    <style type="text/css">
+                        .e-mail:before {
+                            content: attr(data-website) "\0040" attr(data-user);
+                            unicode-bidi: bidi-override;
+                            direction: rtl;
+                        }
+                    </style>
+                    class="e-mail" data-user="tcatnoc" data-website="eb.irazandalim"
+                    -->
+                    <a  href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#109;&#105;&#108;&#97;&#100;&#110;&#97;&#122;&#97;&#114;&#105;&#46;&#98;&#101;" aria-label="Email">
+                            <i class="fa fa-at"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/{{ .resume.basics.linkedin }}" aria-label="LinkedIn">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/{{ .resume.basics.github }}" aria-label="Github">
+                        <i class="fa fa-github-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        {{ end }}
+    </div>
+    <div id="language">
+            {{ if eq .Site.Language.Lang "en" }}
+                <div class="active_language"><a href="https://miladnazari.be">ENG</a></div>
+                <div><a href="https://nl.miladnazari.be">NL</a></div>
+            {{ else }}
+                <div><a href="https://miladnazari.be">ENG</a></div>
+                <div class="active_language"><a href="https://nl.miladnazari.be">NL</a></div>
+            {{ end }}
+    </div>
+    
+</nav>
