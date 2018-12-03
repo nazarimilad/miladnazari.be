@@ -284,9 +284,9 @@
       "projects": [
         {
           "name": "miladnazari.be",
-          "description":  "Persoonlijk website",
+          "description":  "Broncode van persoonlijk website",
           "skillsUsed": ["HTML", "CSS", "JSON", "HUGO", "Apache"],
-          "source": ""
+          "source": "https://github.com/nazarimilad/miladnazari.be"
         },
         {
           "name": "spaceprint.be",
