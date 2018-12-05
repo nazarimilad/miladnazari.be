@@ -706,7 +706,7 @@ article a, article a:visited, article a:active {
 /* #endregion */
 
 /* Smartphones (portrait) ----------- */
-@media (max-width : 569px) {
+@media screen and (max-width : 569px) {
 /* Styles */
     .container {
         flex-direction: column;
@@ -876,8 +876,13 @@ article a, article a:visited, article a:active {
 
 }
 
-@media all {
-    .page-break { display: none; }
+@media (max-height : 450px) {
+
+    /* remove picture if viewport is not heigh enough */
+    #profilePicture {
+        display: none;
+    }
+
 }
 
 @media print {
@@ -934,26 +939,16 @@ article a, article a:visited, article a:active {
         display: none;
     }
 
-    /* temporary page-break fix */
-    .page-break { 
-        display: block; 
-        margin: 3em;
-    }
-
     section {
         padding-bottom: 0em;
         margin-bottom: 0em;
         padding-top: 0em;
         background-color: rgb(245, 245, 245);
-    }
+    }  
 
-    section article {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding-top: 1em;
-    }
+    section>article:last-child a img {
+        margin-top: -2.1em;
+    }  
 
     .description {
         min-width: 200px;
@@ -968,6 +963,10 @@ article a, article a:visited, article a:active {
 
     #cards {
         flex-wrap: nowrap
+    }
+
+    #education {
+        margin-bottom: 2em;
     }
 
     abbr[title] {
