@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+<style>
+    .main {
+        width: 89%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main h1 {
+        background-color: rgb(0, 119, 181);
+        color: #F5F5F5;
+        padding: 1em;
+    }
+</style>
+<body class="container">
+    {{ partial "sidebar.html" . }}
+    <div class="main">
+        <h1>{{ i18n "pageNotFound" }} :/</h1>
+        {{ range $.Site.Menus.main }}
+        <p>{{ .Identifier }}</p>
+        {{ end }}
+    </div>
+    {{ partial "footer.html" . }}
+</body>
+</html>
