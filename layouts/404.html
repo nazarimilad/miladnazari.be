@@ -16,9 +16,6 @@
     {{ partial "sidebar.html" . }}
     <div class="main">
         <h1>{{ i18n "pageNotFound" }} :/</h1>
-        {{ range $.Site.Menus.main }}
-        <p>{{ .Identifier }}</p>
-        {{ end }}
     </div>
     {{ partial "footer.html" . }}
 </body>
