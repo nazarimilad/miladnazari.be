@@ -3,7 +3,7 @@
 # generate and render web pages
 hugo
 # minify every html page
-/usr/bin/minify -r public/ --url 'text/html' -o public/
+/usr/bin/minify/minify -r public/ --url 'text/html' -o public/
 
 # sync with git repository and hosting server
 git add .
