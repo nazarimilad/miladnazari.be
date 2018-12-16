@@ -1,4 +1,7 @@
 {{ partial "header.html" . }}
+{{ with resources.Get "css/cv.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
 <body class="container">
     {{ partial "sidebar.html" . }}
     <div class="main">
@@ -123,6 +126,8 @@
         {{ end }}
     </div>
     {{ partial "footer.html" . }}
+    {{ $printStyle := resources.Get "css/print.css" | minify}}
+    <link rel="stylesheet" href="{{ $printStyle.RelPermalink }}" media="print"/>
 </body>
 
 </html>

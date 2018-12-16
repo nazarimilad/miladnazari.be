@@ -32,18 +32,20 @@
         <div id="contact">
             <ul>
                 <li>
-                    <a  href="https://www.linkedin.com/in/{{ .resume.basics.email }}" aria-label="Email">
-                            <i class="fa fa-at"></i>
+                    <a  href="mailto:{{ .resume.basics.email }}" aria-label="Email">
+                        <img src="/img/at.png" alt="Email">
+                            
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/{{ .resume.basics.linkedin }}" aria-label="LinkedIn">
-                        <i class="fa fa-linkedin"></i>
+                        <img src="/img/linkedin.png" alt="LinkedIn">
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/{{ .resume.basics.github }}" aria-label="Github">
-                        <i class="fa fa-github-alt"></i>
+                        <img src="/img/github.png" alt="Github">
+                        
                     </a>
                 </li>
             </ul>
