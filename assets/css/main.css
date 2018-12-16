@@ -252,6 +252,10 @@ figcaption {
     border-bottom: solid 2px white;    
 }
 
+#contact img {
+    width: 10%;
+}
+
 #language {
     display: flex;
     flex-direction: row;
@@ -347,6 +351,10 @@ section>h2 {
         min-height: 2.5em;
         width: 2%;
         height: 85%;
+    }
+
+    #contact img {
+        width: 4%;
     }
 
     section {
