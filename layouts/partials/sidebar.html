@@ -40,7 +40,7 @@
                         {{ end }}
                         {{ if .resume.basics.contact.email }}
                             <li>
-                                <a  href="{{ .Site.BaseURL }}/publickey.{{ .resume.basics.contact.email }}.asc" download>
+                                <a  href="{{ .Site.BaseURL }}/keys/publickey.{{ .resume.basics.contact.email }}.asc" download>
                                         {{ readFile "static/img/key.svg" | safeHTML }}
                                 </a>
                             </li>
