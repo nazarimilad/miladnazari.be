@@ -141,7 +141,7 @@
         {{ end }}
     </div>
     {{ $printStyle := resources.Get "css/print.scss" | toCSS | minify}}
-    <link rel="stylesheet" href="{{ $printStyle.Permalink }}" media="print"/>
+    <link rel="stylesheet" href="{{ $printStyle.RelPermalink }}" media="print"/>
 </body>
 
 </html>

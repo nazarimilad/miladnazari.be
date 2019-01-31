@@ -5,8 +5,12 @@ hugo
 # minify every html page
 /usr/bin/minify/minify -r public/ --url 'text/html' -o public/
 # print the PDF-verions of the CV
+hugo server -D
 google-chrome --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/en/Milad-Nazari-en.pdf --no-margins file:///home/dodolord/Documents/Projecten/miladnazari.be/public/en/index.html
 google-chrome --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/nl/Milad-Nazari-nl.pdf --no-margins file:///home/dodolord/Documents/Projecten/miladnazari.be/public/nl/index.html
+PID=$!
+sleep 2
+kill $PID
 
 # sync with git repository and hosting server
 git add .
