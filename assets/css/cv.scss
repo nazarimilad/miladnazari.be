@@ -18,276 +18,284 @@ section {
             text-align: center;
         }
     }
-}
 
-
-#experience  article {
-    border-bottom: 1px solid $grayBorder;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    @media screen and (max-width : $breakSmall) {
-        padding-left: 0.6em;
-        padding-right: 0.6em;
-    }
-
-    @media screen and (max-width : $breakSmallExtra) {
-        justify-content: center;
-    }
-
-    @media (min-width : $breakSmall) and (max-width : $breakMedium) {
+    &#experience  article {
+        border-bottom: 1px solid $grayBorder;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        flex-direction: column;
-        padding: 0.5em;
-    }
-
-    &:nth-child(even) a div {
-        background-color: $blueLight;
-    }
-
-    &:nth-child(odd) a div {
-        background-color: $grayDark;
-    }
-
-    &:nth-child(2) a div {
-        background: linear-gradient( $orange 10%, $blueLight 10%);
-    }
-
-    &:last-child {
-        border-bottom: none;
-    }
-
-    p {
-        @media (min-width : $breakSmall) and (max-width : $breakMedium) {
-            min-width: 100%;
-        }
-    }
-
-    .square {
-        color: $white;
-        font-weight: bold;
-        text-align: center;
-        width: 3.5em;
-        height: 3.5em;
-        padding: 1em;
-        margin-top: 0.8em;
-        margin-bottom: 0.8em;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-    }
-
-    .details {
-        padding-left: 1em;
-        min-width: 35%;
-
-        @media (min-width : $breakSmall) and (max-width : $breakMedium) {
-            padding: 0em;
-        }
-
-        &>h3 {
-            margin-top: 0.5em;
-            margin-bottom: 0em;
-        }
-        
-        &>p {
-            margin-top: 0.1em;
-            margin-bottom: 0.1em;
-        }
-    }
-
-    .description {
-        width: 50%;
-
+    
         @media screen and (max-width : $breakSmall) {
-            width: 100%;
-        }
-    }
-}
-
-#education {
-    #cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        flex: 1 1 0;
-        
-        a {
-            &:nth-child(1) .card {
-                background: linear-gradient(to right, $orange 3%, $blueLight 3%);
-
-                @media screen and (max-width : $breakSmall) {
-                    background: linear-gradient(to right, $orange 4%, $blueLight 4%);
-                }
-            }
-
-            .card {
-                background-color: $blueLight;
-                color: $white;
-                margin: 1em;
-                padding-left: 1em;
-                display: flex;
-                flex-wrap: wrap;
-    
-                * {
-                    padding-right: 1em;
-                }
-            }
-        }
-    }
-}
-
-#skills {
-    
-    table { 
-        width: 100%; 
-        border-collapse: collapse; 
-        margin-top: 1em;
-        margin-bottom: 1em;
-
-        @media screen and (max-width : $breakSmall) {
-            display: block; 
-        }
-
-        thead {
-            @media screen and (max-width : $breakSmall) {
-                display: block; 
-            }
-
-            tr {
-                // hide table headers (but not display: none;, for accessibility)
-                @media screen and (max-width : $breakSmall) {
-                    position: absolute;
-                    top: -9999px;
-                    left: -9999px;
-                }
-            }
-        }
-
-        tbody {
-            @media screen and (max-width : $breakSmall) {
-                display: block; 
-            }
+            padding-left: 0.6em;
+            padding-right: 0.6em;
         }
     
-        tr {
-            // zebra striping
-            &:nth-of-type(even) { 
-                background: $grayLight; 
-            }
-
-            @media screen and (max-width : $breakSmall) {
-                display: block; 
-                border-bottom: 1px solid #ccc;
-            }
-    
-            th { 
-                background: $blueLight; 
-                color: $white; 
-                font-weight: bold; 
-                text-align: center; 
-                padding: 0.5em;
-
-                @media screen and (max-width : $breakSmall) {
-                    display: block; 
-                }
-    
-                &.domain {
-                    background: $grayDark;
-
-                    @media screen and (max-width : $breakSmall) {
-                        background: rgb(49, 51, 53);
-                    }
-                } 
-    
-                &#knowledgeLevelColumn, &#specificationColumn {
-                    text-align: left;
-                    padding-left: 1em;
-                    width: 40%; 
-                }
-            }
-    
-            td { 
-                padding: 6px;
-                padding-left: 1em; 
-                text-align: left; 
-
-                @media screen and (max-width : $breakSmall) {
-                    display: block; 
-                    // behave  like a "row"
-                    border: none;
-                    border-bottom: 1px solid #eee; 
-                    position: relative;
-                    padding-left: 50%; 
-
-                    &:before { 
-                        // now like a table header
-                        position: absolute;
-                        // top/left values mimic padding
-                        top: 6px;
-                        left: 6px;
-                        width: 45%; 
-                        padding-right: 10px; 
-                        white-space: nowrap;
-                    }
-
-                    &:nth-of-type(1):before { content: "Specific"; }
-                    &:nth-of-type(2):before { content: "Proficiency Level"; }
-                }
-            }
-        }
-    }
-    
-    &>div {
-        background-color: $blueLight;
-        color: $white;
-        font-weight: bold;
-        display: inline-block;
-        padding: 0.5em;
-        margin-bottom: 1em;
-    }
-}
-
-#interests {
-    margin-bottom: 2em;
-
-    &>div {
-        display: flex;
-        flex-wrap: wrap;
-
-        @media screen and (max-width : $breakSmall) {
+        @media screen and (max-width : $breakSmallExtra) {
             justify-content: center;
         }
-
-        .diamond {
-            margin: 2em;
+    
+        @media (min-width : $breakSmall) and (max-width : $breakMedium) {
+            align-items: center;
+            flex-direction: column;
+            padding: 0.5em;
+        }
+    
+        &:nth-child(even) a div {
+            background-color: $blueLight;
+        }
+    
+        &:nth-child(odd) a div {
+            background-color: $grayDark;
+        }
+    
+        &:nth-child(2) a div {
+            background: linear-gradient( $orange 10%, $blueLight 10%);
+        }
+    
+        &:last-child {
+            border-bottom: none;
+        }
+    
+        p {
+            @media (min-width : $breakSmall) and (max-width : $breakMedium) {
+                min-width: 100%;
+            }
+        }
+    
+        .square {
             color: $white;
             font-weight: bold;
             text-align: center;
-            transform:rotate(45deg);
-            height: 5em;
-            width: 5em;
+            width: 3.5em;
+            height: 3.5em;
+            padding: 1em;
+            margin-top: 0.8em;
+            margin-bottom: 0.8em;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+    
+        .details {
+            padding-left: 1em;
+            min-width: 35%;
+    
+            @media (min-width : $breakSmall) and (max-width : $breakMedium) {
+                padding: 0em;
+            }
+    
+            &>h3 {
+                margin-top: 0.5em;
+                margin-bottom: 0em;
+            }
+            
+            &>p {
+                margin-top: 0.1em;
+                margin-bottom: 0.1em;
+            }
+        }
+    
+        .description {
+            width: 50%;
+    
+            @media screen and (max-width : $breakSmall) {
+                width: 100%;
+            }
+        }
+    }
 
-            &:nth-child(odd) {
-                background-color: $blueLight;
+    &#education {
+        #cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            flex: 1 1 0;
+            
+            a {
+                &:nth-child(1) .card {
+                    background: linear-gradient(to right, $orange 3%, $blueLight 3%);
+    
+                    @media screen and (max-width : $breakSmall) {
+                        background: linear-gradient(to right, $orange 4%, $blueLight 4%);
+                    }
+                }
+    
+                .card {
+                    background-color: $blueLight;
+                    color: $white;
+                    margin: 1em;
+                    padding-left: 1em;
+                    display: flex;
+                    flex-wrap: wrap;
+        
+                    * {
+                        padding-right: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    &#skills {
+    
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 1em;
+            margin-bottom: 1em;
+    
+            @media screen and (max-width : $breakSmall) {
+                display: block; 
+            }
+    
+            thead {
+                @media screen and (max-width : $breakSmall) {
+                    display: block; 
+                }
+    
+                tr {
+                    // hide table headers (but not display: none;, for accessibility)
+                    @media screen and (max-width : $breakSmall) {
+                        position: absolute;
+                        top: -9999px;
+                        left: -9999px;
+                    }
+                }
+            }
+    
+            tbody {
+                @media screen and (max-width : $breakSmall) {
+                    display: block; 
+                }
             }
         
-            &:nth-child(even) {
-                background-color: $grayDark;
+            tr {
+                // zebra striping
+                &:nth-of-type(even) { 
+                    background: $grayLight; 
+                }
+    
+                @media screen and (max-width : $breakSmall) {
+                    display: block; 
+                    border-bottom: 1px solid #ccc;
+                }
+        
+                th { 
+                    background: $blueLight; 
+                    color: $white; 
+                    font-weight: bold; 
+                    text-align: center; 
+                    padding: 0.5em;
+    
+                    @media screen and (max-width : $breakSmall) {
+                        display: block; 
+                    }
+        
+                    &.domain {
+                        background: $grayDark;
+    
+                        @media screen and (max-width : $breakSmall) {
+                            background: rgb(49, 51, 53);
+                        }
+                    } 
+        
+                    &#knowledgeLevelColumn, &#specificationColumn {
+                        text-align: left;
+                        padding-left: 1em;
+                        width: 40%; 
+                    }
+                }
+        
+                td { 
+                    padding: 6px;
+                    padding-left: 1em; 
+                    text-align: left; 
+    
+                    @media screen and (max-width : $breakSmall) {
+                        display: block; 
+                        // behave  like a "row"
+                        border: none;
+                        border-bottom: 1px solid #eee; 
+                        position: relative;
+                        padding-left: 50%; 
+    
+                        &:before { 
+                            // now like a table header
+                            position: absolute;
+                            // top/left values mimic padding
+                            top: 6px;
+                            left: 6px;
+                            width: 45%; 
+                            padding-right: 10px; 
+                            white-space: nowrap;
+                        }
+    
+                        &:nth-of-type(1):before { content: "Specific"; }
+                        &:nth-of-type(2):before { content: "Proficiency Level"; }
+                    }
+                }
             }
+        }
+        
+        &>div {
+            background-color: $blueLight;
+            color: $white;
+            font-weight: bold;
+            display: inline-block;
+            padding: 0.5em;
+            margin-bottom: 1em;
+        }
+    }
 
-            .diamond-text {
-                display: table-cell;
-                transform: rotate(-45deg);
-                vertical-align: middle;
+    &#interests {
+        margin-bottom: 2em;
+    
+        &>div {
+            display: flex;
+            flex-wrap: wrap;
+    
+            @media screen and (max-width : $breakSmall) {
+                justify-content: center;
+            }
+    
+            .diamond {
+                margin: 2em;
+                color: $white;
+                font-weight: bold;
+                text-align: center;
+                transform:rotate(45deg);
                 height: 5em;
                 width: 5em;
+    
+                &:nth-child(odd) {
+                    background-color: $blueLight;
+                }
+            
+                &:nth-child(even) {
+                    background-color: $grayDark;
+                }
+    
+                .diamond-text {
+                    display: table-cell;
+                    transform: rotate(-45deg);
+                    vertical-align: middle;
+                    height: 5em;
+                    width: 5em;
+                }
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 
