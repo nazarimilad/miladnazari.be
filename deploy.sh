@@ -7,9 +7,9 @@ hugo
 # print the PDF-verions of the CV
 hugo server -D &
 sleep 3
-google-chrome --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/en/Milad-Nazari-en.pdf --no-margins http://localhost:1313/
+/usr/bin/google-chrome-stable --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/en/Milad-Nazari-en.pdf --no-margins http://localhost:1313/
 sleep 3
-google-chrome --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/nl/Milad-Nazari-nl.pdf --no-margins http://localhost:1314/
+/usr/bin/google-chrome-stable --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/nl/Milad-Nazari-nl.pdf --no-margins http://localhost:1314/
 sleep 3
 PID=$!
 sleep 2
