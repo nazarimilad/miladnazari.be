@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-# generate and render web pages
-hugo
-# minify every html page
-/usr/bin/minify/minify -r public/ --url 'text/html' -o public/
+# generate, render and minify every html page
+hugo --minify
 # print the PDF-verions of the CV
 hugo server -D &
 sleep 3
