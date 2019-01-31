@@ -34,21 +34,30 @@
                         {{ if .resume.basics.contact.email }}
                             <li>
                                 <a  href="mailto:{{ .resume.basics.contact.email }}">
-                                    <img src="/img/email.svg" alt="Email"> 
+                                        {{ readFile "static/img/email.svg" | safeHTML }}
+                                </a>
+                            </li>
+                        {{ end }}
+                        {{ if .resume.basics.contact.email }}
+                            <li>
+                                <a  href="{{ .Site.BaseURL }}/publickey.{{ .resume.basics.contact.email }}.asc" download>
+                                        {{ readFile "static/img/key.svg" | safeHTML }}
                                 </a>
                             </li>
                         {{ end }}
                         {{ if .resume.basics.contact.linkedin }}
                             <li>
                                 <a href="https://www.linkedin.com/in/{{ .resume.basics.contact.linkedin }}">
-                                    <img src="/img/linkedin.svg" alt="LinkedIn">
+                                    {{ readFile "static/img/linkedin.svg" | safeHTML }}
+
                                 </a>
                             </li>
                         {{ end }}
                         {{ if .resume.basics.contact.github }}                        
                             <li>
                                 <a href="https://github.com/{{ .resume.basics.contact.github }}">
-                                    <img src="/img/github.svg" alt="Github">
+                                    {{ readFile "static/img/github.svg" | safeHTML }}
+
                                 </a>
                             </li>
                         {{ end }}
