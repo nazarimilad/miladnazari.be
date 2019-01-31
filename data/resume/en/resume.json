@@ -2,254 +2,186 @@
   "basics": {
     "language": "en",
     "name": "Milad Nazari",
-    "email": "contact@miladnazari.be",
-    "website": "miladnazari.be",
     "summary": "Studious and passionated computer science student @ Hogent",
     "location": {
       "countryCode": "BE",
       "region": "East-Flanders"
     },
-    "linkedin": "miladnazari",
-    "github": "nazarimilad"
+    "careerStatus": "Assistent teacher @CodeFever",
+    "contact": {
+      "email": "contact@miladnazari.be",
+      "linkedin": "miladnazari",
+      "github": "nazarimilad",
+      "website": "miladnazari.be"
+    }
   },
-  "work": [
+  "experience": [
     {
-      "company": "Codefever",
+      "companyName": "Codefever",
       "position": "Assistant teacher",
       "website": "codefever.be",
-      "startDate": "01-02-2018",
-      "endDate": "until now",
-      "location": "Gent",
+      "startDate": "01/02/2018",
+      "location": "Ghent",
       "summary": "Assistant teacher. Teaching computational concepts, algoritmes and web development to children. Helping with Scratch and Minecraft Education exercices."
     },
     {
-      "company": "VPK Packaging",
+      "companyName": "VPK Packaging",
       "position": "Support engineer & automation",
       "website": "vpkgroup.com",
-      "startDate": "01-08-2018",
-      "endDate": "31-08-2018",
+      "startDate": "01/08/2018",
+      "endDate": "31/08/2018",
       "location": "Erembodegem",
-      "summary": "Technical support and data analysis automation with Powershell, C# and Visual Basic."
+      "summary": "Technical support and data mining automation with Powershell, C# and Visual Basic."
     },
     {
-      "company": "UZ Brussel",
+      "companyName": "UZ Brussel",
       "position": "Junior software engineer",
       "website": "uzbrussel.be",
-      "startDate": "02-07-2018",
-      "endDate": "31-07-2018",
-      "location": "Brussel",
+      "startDate": "02/07/2018",
+      "endDate": "31/07/2018",
+      "location": "Brussels",
       "summary": "Agile object oriented software engineering in Java for the development of the electronic patient record system Primuz. Usage of design patterns and several technologies such as Java EE, Hibernate, Vaadin, Maven, Jenkins and Hazelcast."
     },
     {
-      "company": "Spaceprint",
+      "companyName": "Spaceprint",
       "position": "Full stack developer",
-      "website": "spaceprint.be",
-      "startDate": "01-06-2014",
-      "endDate": "01-06-2016",
+      "startDate": "01/06/2014",
+      "endDate": "01/06/2016",
       "location": "Dendermonde",
       "summary": "Development and maintenance of both front end and back and, SEO, DNS-management, social marketing and implementation of STL volumetry algorithms"
     },
     {
-      "company": "Github, Gitlab",
+      "companyName": "Github, Gitlab",
       "position": "Open source developer",
       "website": "github.com",
-      "startDate": "01-07-2014",
-      "endDate": "until now",
-      "location": "",
+      "startDate": "01/07/2014",
       "summary": "Development and documentation of open source software. Contributions and bug reporting of open source projects on Github and Gitlab."
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Plazey",
-      "position": "Technical assistant",
-      "website": "https://www.plazey.be/",
-      "startDate": "2012-07-01",
-      "endDate": "2012-07-30"
     }
   ],
   "education": [
     {
-      "institution": "University College Hogent",
+      "institutionName": "Univ. College Hogent",
       "website": "hogent.be",
-      "logo": "assets/images/opleiding_hogent.png",
-      "area": "Applied computer science",
+      "area": "Applied C.S.",
       "studyType": "Professional bachelor",
-      "startDate": "2017",
-      "endDate": "until now"
+      "startDate": "2017"
     },
     {
-      "institution": "University UGent",
+      "institutionName": "University UGent",
       "website": "ugent.be",
-      "logo": "assets/images/opleiding_ugent.png",
-      "area": "Industrial computer science engineering",
+      "area": "Industrial engineering C.S.",
       "studyType": "Academic bachelor",
       "startDate": "2014",
       "endDate": "2017"
     },
     {
-      "institution": "Royal athena Dendermonde",
+      "institutionName": "KAD",
       "website": "kad.be",
-      "logo": "assets/images/opleiding_koninklijke_atheneum_dendermonde.jpg",
       "area": "Latin - Science",
       "studyType": "Secundary onderwijs",
       "startDate": "2008",
       "endDate": "2014"
     }
   ],
-  "skills": [
-    {
-      "category": "Programming languages",
-      "skillsets": [
-        {
-          "level": "Advanced",
-          "subskills": [
-            "Java",
-            "C#"
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "subskills": [
-            "Python"
-          ]
-        },
-        {
-          "level": "Basic knowledge",
-          "subskills": [
-            "C++",
-            "Perl"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Software engineering",
-      "skillsets": [
-        {
-          "level": "Advanced",
-          "subskills": [
-            "OOP",
-            "UML"
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "subskills": [
-            "Functional analysis",
-            "TDD",
-            "Git",
-            "Design patterns"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "System administration & DevOps",
-      "skillsets": [
-        {
-          "level": "Advanced",
-          "subskills": [
-            "Bash"
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "subskills": [
-            "Linux",
-            "Apache"
-            
-          ]
-        },
-        {
-          "level": "Basic knowledge",
-          "subskills": [
-            "Windows Server",
-            "Powershell"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Data analysis",
-      "skillsets": [
-        {
-          "level": "Advanced",
-          "subskills": [
-            "EERD",
-            "SQL",
-            "Transact-SQL",
-            "SQL Server"
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "subskills": [
-            "XML",
-            "MySQL"
-          ]
-        },
-        {
-          "level": "Basic knowledge",
-          "subskills": [
-            "Big Data",
-            "MongoDB",
-            "PowerBI",
-            "Pandas",
-            "Numpy",
-            "Scikit-Learn"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Web development",
-      "skillsets": [
-        {
-          "level": "Advanced",
-          "subskills": [
-            "HTML",
-            "CSS",
-            "Bootstrap"
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "subskills": [
-            "SaSS",
-            "Javascript",
-            "ASP.NET",
-            "Hugo"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Communication",
-      "skillsets": [
-        {
-          "level": "Advanced",
-          "subskills": [
-            "Dutch",
-            "French",
-            "English"
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "subskills": [
-            "Persian"
-          ]
-        },
-        {
-          "level": "Basic knowledge",
-          "subskills": [
-            "German"
-          ]
-        }
-      ]
-    }
-  ],
+  "knowledgeAndSkills": {
+    "knowledge": [
+      {
+        "category": "Programming languages",
+        "skillsets": [
+          {
+            "level": "Advanced",
+            "subskills": ["Java", "C#"]
+          },
+          {
+            "level": "Intermediate",
+            "subskills": ["Python"]
+          },
+          {
+            "level": "Basic knowledge",
+            "subskills": ["C++", "Perl"]
+          }
+        ]
+      },
+      {
+        "category": "Software engineering",
+        "skillsets": [
+          {
+            "level": "Advanced",
+            "subskills": ["OOP", "UML"]
+          },
+          {
+            "level": "Intermediate",
+            "subskills": ["Functional analysis", "TDD", "Git", "Design patterns"]
+          }
+        ]
+      },
+      {
+        "category": "System administration & DevOps",
+        "skillsets": [
+          {
+            "level": "Advanced",
+            "subskills": ["Bash"]
+          },
+          {
+            "level": "Intermediate",
+            "subskills": ["Linux", "Apache"]
+          },
+          {
+            "level": "Basic knowledge",
+            "subskills": ["Windows Server", "Powershell"]
+          }
+        ]
+      },
+      {
+        "category": "Data analysis",
+        "skillsets": [
+          {
+            "level": "Advanced",
+            "subskills": ["EERD", "SQL", "Transact-SQL", "SQL Server"]
+          },
+          {
+            "level": "Intermediate",
+            "subskills": ["XML", "MySQL"]
+          },
+          {
+            "level": "Basic knowledge",
+            "subskills": ["Big Data", "MongoDB", "PowerBI", "Pandas", "Numpy", "Scikit-Learn"]
+          }
+        ]
+      },
+      {
+        "category": "Web development",
+        "skillsets": [
+          {
+            "level": "Advanced",
+            "subskills": ["HTML", "CSS", "Bootstrap"]
+          },
+          {
+            "level": "Intermediate",
+            "subskills": ["SaSS", "Javascript", "ASP.NET", "Hugo"]
+          }
+        ]
+      },
+      {
+        "category": "Communication",
+        "skillsets": [
+          {
+            "level": "Advanced",
+            "subskills": ["Dutch", "French", "English"]
+          },
+          {
+            "level": "Intermediate",
+            "subskills": ["Persian"]
+          },
+          {
+            "level": "Basic knowledge",
+            "subskills": ["German"]
+          }
+        ]
+      }
+    ],
+    "skills": ["Driver license"]
+  },
   "interests": ["Computer Vision", "Machine Learning", "IOTA", "Data analysis", "Open source"],
   "projects": [
     {
@@ -258,14 +190,12 @@
         {
           "name": "Instagram Downloader",
           "description":  "Instagram data mining program for archiving and data analysis",
-          "skillsUsed": ["Java", "Design patterns", "Unit testing", "Maven"],
-          "source": ""
+          "skillsUsed": ["Java", "Design patterns", "Unit testing", "Maven"]
         },
         {
           "name": "War over time",
           "description":  "Renders and animates territorial changes in Syria and Iraq during the Syrian civil war",
-          "skillsUsed": ["Perl", "Selenium", "Imagemagick"],
-          "source": "https://github.com/nazarimilad/war-over-time"
+          "skillsUsed": ["Perl", "Selenium", "Imagemagick"]
         }
       ]
     },

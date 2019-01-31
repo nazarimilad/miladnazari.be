@@ -1,13 +1,18 @@
+# Hostname (and path) to the root
 baseURL = "https://miladnazari.be/"
+# Default pagination every X items
 Paginate = 10
+# Enable this to make all relative URLs relative to content
+# root. Note that this does not affect absolute URLs.
 relativeURLs = true
+# Missing translations will default to this content language
 DefaultContentLanguage = "en"
+# Do not inject generator meta tag on homepage
 disableHugoGeneratorInject = true
+# Disable RSS feed
+disableKinds = ["RSS"]
 [params]
-    githubName = "nazarimilad"
-    linkedinName = "miladnazari"
     description = "Personal website and blog"
-    currentWork = "Assistent teacher @CodeFever"
 [languages]
     [languages.en]
         baseURL = "https://miladnazari.be/"
@@ -18,6 +23,7 @@ disableHugoGeneratorInject = true
         url    = "/"
         name   = "CV"
         weight = 1
+        
         [[languages.en.menu.main]]
         identifier = "projects"
         url    = "/projects/"

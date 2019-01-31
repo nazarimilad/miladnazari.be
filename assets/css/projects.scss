@@ -1,0 +1,77 @@
+@import './variables.scss';
+
+.projectSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;   
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+
+        .project {
+            background-color: #eee;
+            margin: 1em;
+            display: flex;  
+            flex-direction: column;
+            border-bottom: inherit;
+            min-width: 20%;
+            border: 0.1em solid $blueLight;
+
+            @media (max-width : $breakMedium) {
+                min-width: 90%;
+            }
+
+            @media (min-width : $breakMedium) {
+                min-width: 22em;
+            }
+
+            .projectTitle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $blueLight;
+                color: $white;
+                padding: 0em 1em 0em 1em;
+
+                h3 {
+                    @media screen and (max-width : 569px) {
+                        min-width: 15%;
+                        margin-right: 1em;
+                    } 
+                }
+
+                a, a:visited, a:active {
+                    color: $white;
+                }
+
+                .sourceBtn {
+                    display: flex;
+                    justify-content: center;
+                    width: 2em;
+                    height: 2em;
+
+                    img {
+                        width: 80%;
+                    }
+                }
+            }
+
+            .projectDetails {
+                padding: 1em;
+
+                p {
+                    max-width: 20em;
+                    min-width: 20em;
+                    flex-basis: auto;
+                    flex-grow: 1;
+
+                    @media screen and (max-width : 820px) {
+                        min-width: inherit;
+                    }
+                }
+            }
+            
+        }
+    }
+}

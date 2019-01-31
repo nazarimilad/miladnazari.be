@@ -14,7 +14,8 @@
   translation: "Proficiency Level"
 - id: interests
   translation: "interests"
-
+- id: untilNow
+  translation: "until now"
 
 - id: description
   translation: "Description"

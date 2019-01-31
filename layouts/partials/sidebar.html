@@ -1,65 +1,71 @@
 <nav class="website-only">
-        
     <div>
         <figure>
             <picture>
                 <img src="/img/profile.jpg" alt="profile foto" id="profilePicture">
             </picture>
-            <div class="desc">
+            <div class="profileDescription">
                 {{ with index .Site.Data.resume .Site.Language.Lang }}
-                <figcaption>{{ .resume.basics.name }}</figcaption>
+                    <figcaption>{{ .resume.basics.name }}</figcaption>
+                    <small>{{ .resume.basics.careerStatus }}</small>
                 {{ end }}
-                <small>{{ .Param "currentWork" }}</small>
             </div>
         </figure>
         {{ with index .Site.Data.resume .Site.Language.Lang }}
-        <div id="menu">
-            <ul>
-                {{ range $.Site.Menus.main }}
-                {{ if eq $.Kind "home" }}
-                    {{ $.Scratch.Set "active" ($.IsMenuCurrent "main" .) }}
-                {{ else }}
-                    {{ $.Scratch.Set "active" (or (eq .Identifier "projects") (eq .Identifier "projecten")) }}
-                {{ end }}
-                {{ $active := $.Scratch.Get "active" }}
-                <li>
-                    <a href="{{ .URL | absLangURL  }}">{{ .Name  }}</a>
-                    <div class="signet {{ if $active }}active{{end}}"></div>
-                </li>
-                {{ end  }}
-            </ul>  
-        </div>
-        <div id="contact">
-            <ul>
-                <li>
-                    <a  href="mailto:{{ .resume.basics.email }}" aria-label="Email">
-                        <img src="/img/at.png" alt="Email" width="10%">
-                            
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/{{ .resume.basics.linkedin }}" aria-label="LinkedIn">
-                        <img src="/img/linkedin.png" alt="LinkedIn" width="10%">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/{{ .resume.basics.github }}" aria-label="Github">
-                        <img src="/img/github.png" alt="Github" width="10%">
-                        
-                    </a>
-                </li>
-            </ul>
-        </div>
+            <div id="menu">
+                <ul>
+                    {{ range $.Site.Menus.main }}
+                        {{ if eq $.Kind "home" }}
+                            {{ $.Scratch.Set "active" ($.IsMenuCurrent "main" .) }}
+                        {{ else }}
+                            {{ $.Scratch.Set "active" (or (eq .Identifier "projects") (eq .Identifier "projecten")) }}
+                        {{ end }}
+                        {{ $active := $.Scratch.Get "active" }}
+                        <li>
+                            <a href="{{ .URL | absLangURL  }}">{{ .Name  }}</a>
+                            <div class="signet {{ if $active }}active{{end}}"></div>
+                        </li>
+                    {{ end  }}
+                </ul>  
+            </div>
+            {{ if .resume.basics.contact }}
+                <div id="contact">
+                    <ul>
+                        {{ if .resume.basics.contact.email }}
+                            <li>
+                                <a  href="mailto:{{ .resume.basics.contact.email }}">
+                                    <img src="/img/email.svg" alt="Email"> 
+                                </a>
+                            </li>
+                        {{ end }}
+                        {{ if .resume.basics.contact.linkedin }}
+                            <li>
+                                <a href="https://www.linkedin.com/in/{{ .resume.basics.contact.linkedin }}">
+                                    <img src="/img/linkedin.svg" alt="LinkedIn">
+                                </a>
+                            </li>
+                        {{ end }}
+                        {{ if .resume.basics.contact.github }}                        
+                            <li>
+                                <a href="https://github.com/{{ .resume.basics.contact.github }}">
+                                    <img src="/img/github.svg" alt="Github">
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            {{ end }}
         {{ end }}
     </div>
-    <div id="language">
+    {{ if .Site.IsMultiLingual }}
+        <div id="language">
             {{ if eq .Site.Language.Lang "en" }}
-                <div class="active_language"><a href="https://miladnazari.be">ENG</a></div>
+                <div class="active_language"><a href="https://miladnazari.be">{{ upper .Site.Language.Lang }}</a></div>
                 <div><a href="https://nl.miladnazari.be">NL</a></div>
             {{ else }}
-                <div><a href="https://miladnazari.be">ENG</a></div>
-                <div class="active_language"><a href="https://nl.miladnazari.be">NL</a></div>
+                <div><a href="https://miladnazari.be">EN</a></div>
+                <div class="active_language"><a href="https://nl.miladnazari.be">{{ upper .Site.Language.Lang }}</a></div>
             {{ end }}
-    </div>
-    
+        </div>
+    {{ end }}
 </nav>

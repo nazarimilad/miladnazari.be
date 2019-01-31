@@ -2,253 +2,188 @@
   "basics": {
     "language": "nl",
     "name": "Milad Nazari",
-    "email": "&#109;&#97;&#105;&#108;&#116;&#111;&#58;%63%6F%6E%74%61%63%74%40%6D%69%6C%61%64%6E%61%7A%61%72%69%2E%62%65",
-    "website": "miladnazari.be",
     "summary": "Leergierig en gepassioneerd student informatica @ Hogent",
     "location": {
       "countryCode": "BE",
       "region": "Oost-Vlaanderen"
     },
-    "linkedin": "miladnazari",
-    "github": "nazarimilad"
+    "careerStatus": "Assistent lesgever @CodeFever",
+    "contact": {
+      "email": "contact@miladnazari.be",
+      "linkedin": "miladnazari",
+      "github": "nazarimilad",
+      "website": "miladnazari.be"
+    }
   },
-  "work": [
+  "experience": [
     {
-      "company": "Codefever",
+      "companyName": "Codefever",
       "position": "Lesgever assistent",
       "website": "codefever.be",
-      "startDate": "01-02-2018",
-      "endDate": "heden",
+      "startDate": "01/02/2018",
       "location": "Gent",
       "summary": "Lesgever assistentie. Aanleren van computationele concepten, algoritmen en web development aan kinderen van basisschool en middelbaar. Meehelpen bij oefeningen Scratch en Minecraft Education oefeningen."
     },
     {
-      "company": "VPK Packaging",
+      "companyName": "VPK Packaging",
       "position": "Support engineer & automation",
       "website": "vpkgroup.com",
-      "startDate": "01-08-2018",
-      "endDate": "31-08-2018",
+      "startDate": "01/08/2018",
+      "endDate": "31/08/2018",
       "location": "Erembodegem",
       "summary": "Technish support aan medewerkers en data-analyse automatisering a.d.h.v. Powershell, C# en Visual Basic."
     },
     {
-      "company": "UZ Brussel",
+      "companyName": "UZ Brussel",
       "position": "Junior software engineer",
       "website": "uzbrussel.be",
-      "startDate": "02-07-2018",
-      "endDate": "31-07-2018",
+      "startDate": "02/07/2018",
+      "endDate": "31/07/2018",
       "location": "Brussel",
       "summary": "Agile Object-georienteerd software engineering in Java voor de ontwikkeling van het elektronisch patiëntendossier Primuz. Gebruik van design patterns en verschillende technologiën zoals Java EE, Hibernate, Vaadin, Maven, Jenkins en Hazelcast."
     },
     {
-      "company": "Spaceprint",
+      "companyName": "Spaceprint",
       "position": "Full stack developer",
-      "website": "spaceprint.be",
-      "startDate": "01-06-2014",
-      "endDate": "01-06-2016",
+      "startDate": "01/06/2014",
+      "endDate": "01/06/2016",
       "location": "Dendermonde",
       "summary": "Ontwikkeling en onderhoud van zowel front-end als back-end, SEO, DNS-management, sociale marketing en tevens implementering van algoritmes voor STL-volumetrie."
     },
     {
-      "company": "Github, Gitlab",
+      "companyId": "Github",
+      "companyName": "Github, Gitlab",
       "position": "Open source developer",
       "website": "github.com",
-      "startDate": "01-07-2014",
-      "endDate": "heden",
-      "location": "",
+      "startDate": "01/07/2014",
       "summary": "Ontwikkeling en documentering van open source programma's. Contributies en bug rapportering aan open source projecten op Github en Gitlab."
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Plazey",
-      "position": "Technische assistent",
-      "website": "https://www.plazey.be/",
-      "startDate": "2012-07-01",
-      "endDate": "2012-07-30"
     }
   ],
   "education": [
     {
-      "institution": "Hogeschool Hogent",
+      "institutionName": "Hogeschool Hogent",
       "website": "hogent.be",
-      "logo": "assets/images/opleiding_hogent.png",
-      "area": "Toegepaste informatica",
+      "area": "Toegep. informatica",
       "studyType": "Professioneel bachelor",
-      "startDate": "2017",
-      "endDate": "heden"
+      "startDate": "2017"
     },
     {
-      "institution": "Universiteit UGent",
+      "institutionName": "Universiteit UGent",
       "website": "ugent.be",
-      "logo": "assets/images/opleiding_ugent.png",
-      "area": "Industriële Wetenschappen informatica",
+      "area": "Industr. Wetensch.",
       "studyType": "Academisch bachelor",
       "startDate": "2014",
       "endDate": "2017"
     },
     {
-      "institution": "Koninklijke Atheneum Dendermonde",
+      "institutionName": "KAD",
       "website": "kad.be",
-      "logo": "assets/images/opleiding_koninklijke_atheneum_dendermonde.jpg",
-      "area": "Latijn - Wetenschappen",
+      "area": "Latijn - Wetensch.",
       "studyType": "Middelbaar onderwijs",
       "startDate": "2008",
       "endDate": "2014"
     }
   ],
-  "skills": [
-    {
-      "category": "Programeertalen",
-      "skillsets": [
-        {
-          "level": "Geavanceerd",
-          "subskills": [
-            "Java",
-            "C#"
-          ]
-        },
-        {
-          "level": "Gemiddeld",
-          "subskills": [
-            "Python"
-          ]
-        },
-        {
-          "level": "Basiskennis",
-          "subskills": [
-            "C++",
-            "Perl"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Software engineering",
-      "skillsets": [
-        {
-          "level": "Geavanceerd",
-          "subskills": [
-            "OOP",
-            "UML"
-          ]
-        },
-        {
-          "level": "Gemiddeld",
-          "subskills": [
-            "Functionele analyse",
-            "TDD",
-            "Git",
-            "Design patterns"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Systeembeheer & DevOps",
-      "skillsets": [
-        {
-          "level": "Geavanceerd",
-          "subskills": [
-            "Bash"
-          ]
-        },
-        {
-          "level": "Gemiddeld",
-          "subskills": [
-            "Linux",
-            "Apache"
-          ]
-        },
-        {
-          "level": "Basiskennis",
-          "subskills": [
-            "Windows Server",
-            "Powershell"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Data-analyse",
-      "skillsets": [
-        {
-          "level": "Geavanceerd",
-          "subskills": [
-            "EERD",
-            "SQL",
-            "Transact-SQL",
-            "SQL Server"
-          ]
-        },
-        {
-          "level": "Gemiddeld",
-          "subskills": [
-            "XML",
-            "MySQL"
-          ]
-        },
-        {
-          "level": "Basiskennis",
-          "subskills": [
-            "Big Data",
-            "MongoDB",
-            "PowerBI",
-            "Pandas",
-            "Numpy",
-            "Scikit-Learn"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Web development",
-      "skillsets": [
-        {
-          "level": "Geavanceerd",
-          "subskills": [
-            "HTML",
-            "CSS",
-            "Bootstrap"
-          ]
-        },
-        {
-          "level": "Gemiddeld",
-          "subskills": [
-            "SaSS",
-            "Javascript",
-            "ASP.NET",
-            "Hugo"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Communicatie",
-      "skillsets": [
-        {
-          "level": "Geavanceerd",
-          "subskills": [
-            "Nederlands",
-            "Frans",
-            "Engels"
-          ]
-        },
-        {
-          "level": "Gemiddeld",
-          "subskills": [
-            "Perzisch"
-          ]
-        },
-        {
-          "level": "Basiskennis",
-          "subskills": [
-            "Duits"
-          ]
-        }
-      ]
-    }
-  ],
+  "knowledgeAndSkills": {
+    "knowledge": [
+      {
+        "category": "Programeertalen",
+        "skillsets": [
+          {
+            "level": "Geavanceerd",
+            "subskills": ["Java", "C#"]
+          },
+          {
+            "level": "Gemiddeld",
+            "subskills": ["Python"]
+          },
+          {
+            "level": "Basiskennis",
+            "subskills": ["C++", "Perl"]
+          }
+        ]
+      },
+      {
+        "category": "Software engineering",
+        "skillsets": [
+          {
+            "level": "Geavanceerd",
+            "subskills": ["OOP", "UML"]
+          },
+          {
+            "level": "Gemiddeld",
+            "subskills": ["Functionele analyse", "TDD", "Git", "Design patterns"]
+          }
+        ]
+      },
+      {
+        "category": "Systeembeheer & DevOps",
+        "skillsets": [
+          {
+            "level": "Geavanceerd",
+            "subskills": ["Bash"]
+          },
+          {
+            "level": "Gemiddeld",
+            "subskills": ["Linux", "Apache"]
+          },
+          {
+            "level": "Basiskennis",
+            "subskills": ["Windows Server", "Powershell"]
+          }
+        ]
+      },
+      {
+        "category": "Data-analyse",
+        "skillsets": [
+          {
+            "level": "Geavanceerd",
+            "subskills": ["EERD", "SQL", "Transact-SQL", "SQL Server"]
+          },
+          {
+            "level": "Gemiddeld",
+            "subskills": ["XML", "MySQL"]
+          },
+          {
+            "level": "Basiskennis",
+            "subskills": ["Big Data", "MongoDB", "PowerBI", "Pandas", "Numpy", "Scikit-Learn"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Web development",
+        "skillsets": [
+          {
+            "level": "Geavanceerd",
+            "subskills": ["HTML", "CSS", "Bootstrap"]
+          },
+          {
+            "level": "Gemiddeld",
+            "subskills": ["SaSS", "Javascript", "ASP.NET", "Hugo"]
+          }
+        ]
+      },
+      {
+        "category": "Communicatie",
+        "skillsets": [
+          {
+            "level": "Geavanceerd",
+            "subskills": ["Nederlands", "Frans", "Engels"]
+          },
+          {
+            "level": "Gemiddeld",
+            "subskills": ["Perzisch"]
+          },
+          {
+            "level": "Basiskennis",
+            "subskills": ["Duits"]
+          }
+        ]
+      }
+    ],
+    "skills": ["Rijbewijs B"]
+  },
   "interests": ["Computer Visie", "Machine Learning", "IOTA", "Data analyse", "Open source"],
   "projects": [
     {
@@ -257,8 +192,7 @@
         {
           "name": "Instagram Downloader",
           "description":  "Instagram data mining programma voor archivering and data analyse",
-          "skillsUsed": ["Java", "Design patterns", "Unit testing", "Maven"],
-          "source": ""
+          "skillsUsed": ["Java", "Design patterns", "Unit testing", "Maven"]
         },
         {
           "name": "War over time",

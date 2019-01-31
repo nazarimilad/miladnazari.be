@@ -1,35 +1,38 @@
-{{ with resources.Get "css/projects.css" | minify }}
-<style>{{ .Content | safeCSS }}</style>
+{{ with resources.Get "css/projects.scss" | toCSS | minify }}
+    <style>{{ .Content | safeCSS }}</style>
 {{ end }}
 {{ with index .Site.Data.resume .Site.Language.Lang }}  
     {{ range .resume.projects }}
-    <section id="{{ .category }}" class="projectSection">
-        <h2>{{ upper .category }}</h2>
-        <div class="projects">
+        <section id="{{ .category }}" class="projectSection">
+            <h2>{{ upper .category }}</h2>
+            <div class="projects">
                 {{ range .projects }}
-                <div class="project">
-                    <div class="projectTitle">
-                        <h3>{{ .name }}</h3>
-                        {{ if .source }}
-                        <a class="sourceBtn" href="{{ .source }}">
-                                <img src="/img/github_24.png" alt="Github">
-                        </a>
-                        {{ end }}
-                    </div>
-                    <div class="projectDetails">
-                        <div>
-                            <strong>{{ i18n "description" }}:</strong>
-                            <p>{{ .description }}</p>
+                    <div class="project">
+                        <div class="projectTitle">
+                            <h3>{{ .name }}</h3>
+                            {{ if .source }}
+                                <a class="sourceBtn" href="{{ .source }}">
+                                    <img src="/img/github.svg" alt="Github" />
+                                </a>
+                            {{ end }}
                         </div>
-                        <div>
-                            <strong>{{ i18n "skillsUsed" }}:</strong>
-                            <p>{{ delimit .skillsUsed ", " }}</p>
+                        <div class="projectDetails">
+                            {{ if .description }}
+                                <div>
+                                    <strong>{{ i18n "description" }}:</strong>
+                                    <p>{{ .description }}</p>
+                                </div>
+                            {{ end }}
+                            {{ if .skillsUsed }}
+                                <div>
+                                    <strong>{{ i18n "skillsUsed" }}:</strong>
+                                    <p>{{ delimit .skillsUsed ", " }}</p>
+                                </div>
+                            {{ end }}
                         </div>
                     </div>
-                </div>
                 {{ end }}
-        </div>
-        
-    </section>
+            </div>
+        </section>
     {{ end }}
 {{ end }}

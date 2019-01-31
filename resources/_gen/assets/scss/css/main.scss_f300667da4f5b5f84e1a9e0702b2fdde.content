@@ -1,0 +1,271 @@
+/* NORMALISE.CSS */
+/* #region */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0; }
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent; }
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%; }
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none; }
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none; }
+
+/* #endregion */
+/* #region */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url("../fonts/source-sans-pro-v11-latin-regular.woff2") format("woff2"), url("../fonts/source-sans-pro-v11-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("../fonts/source-sans-pro-v11-latin-700.woff2") format("woff2"), url("../fonts/source-sans-pro-v11-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #313335;
+  background-color: whitesmoke; }
+
+ul {
+  list-style: none;
+  padding-left: 0em; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  margin-bottom: 0.2em; }
+
+.btn {
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  padding: 0.5em; }
+
+.container {
+  display: flex; }
+  @media screen and (max-width: 540px) {
+    .container {
+      flex-direction: column; } }
+
+.main {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media screen and (max-width: 540px) {
+    .main {
+      padding: 1em; } }
+  .main header {
+    width: 92%; }
+  .main section {
+    width: 90%;
+    background-color: white;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0em 1em 0em 1em;
+    border: 1px solid #caccce; }
+    @media screen and (max-width: 540px) {
+      .main section {
+        width: 95%;
+        padding-left: 0.5em;
+        padding-right: 0.5em; } }
+    .main section h2 {
+      margin-top: 0.4em;
+      margin-bottom: 0em; }
+
+/* #endregion */
+/* #region */
+nav {
+  background-color: #0077b5;
+  position: sticky;
+  top: 0;
+  min-width: 10em;
+  max-width: 10em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media screen and (max-width: 540px) {
+    nav {
+      position: inherit;
+      height: auto;
+      max-width: inherit; } }
+  nav figcaption, nav small, nav a {
+    color: white; }
+  nav figure {
+    margin: 0em;
+    text-align: center;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column; }
+    @media screen and (max-width: 540px) {
+      nav figure {
+        flex-direction: row;
+        align-items: center; } }
+    nav figure #profilePicture {
+      width: 100%; }
+      @media screen and (max-width: 540px) {
+        nav figure #profilePicture {
+          max-height: 12em; } }
+      @media (max-height: 450px) {
+        nav figure #profilePicture {
+          /* remove picture if viewport is not heigh enough */ }
+          nav figure #profilePicture #profilePicture {
+            display: none; } }
+    nav figure .profileDescription {
+      padding: 0.5em; }
+      @media screen and (max-width: 540px) {
+        nav figure .profileDescription {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          margin-left: auto;
+          margin-right: auto; } }
+      nav figure .profileDescription figcaption {
+        padding: 0.5em;
+        font-weight: 700; }
+  nav #menu {
+    background-color: #313335;
+    width: 100%; }
+    @media screen and (max-width: 540px) {
+      nav #menu {
+        margin-top: -1.3em; } }
+    nav #menu ul {
+      margin-top: 0em;
+      margin-bottom: 0em;
+      display: flex;
+      flex-direction: column; }
+      @media screen and (max-width: 540px) {
+        nav #menu ul {
+          flex-direction: row;
+          justify-content: space-around;
+          text-align: center; } }
+      nav #menu ul li {
+        margin: 0em;
+        padding: 0.3em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-right: 0em; }
+        @media screen and (max-width: 540px) {
+          nav #menu ul li {
+            width: 100%; } }
+        nav #menu ul li:nth-child(odd) {
+          background-color: #6d6f72; }
+        nav #menu ul li a {
+          display: block;
+          width: 100%;
+          padding: 0.3em 0.3em 0.3em 1em; }
+          @media screen and (max-width: 540px) {
+            nav #menu ul li a {
+              padding-top: 0.6em;
+              padding-bottom: 0.6em; } }
+        nav #menu ul li .signet {
+          min-height: 1.6em;
+          width: 7%;
+          height: 90%; }
+          nav #menu ul li .signet.active {
+            background-color: whitesmoke; }
+  nav #contact {
+    text-align: center; }
+    nav #contact li {
+      display: inline;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      border-bottom: solid 2px #0077b5; }
+      nav #contact li:hover {
+        border-bottom: solid 2px white; }
+      nav #contact li img {
+        width: 10%; }
+        @media screen and (max-width: 540px) {
+          nav #contact li img {
+            width: 5%; } }
+  nav #language {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1em; }
+    nav #language div {
+      display: inline-block;
+      margin-right: 0.4em;
+      margin-left: 0.4em;
+      padding: 0.1em; }
+      nav #language div.active_language {
+        border-bottom: solid 2px white; }
+
+/* #endregion */

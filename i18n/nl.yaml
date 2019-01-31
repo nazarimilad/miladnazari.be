@@ -14,7 +14,8 @@
   translation: "Kennisniveau"
 - id: interests
   translation: "interesses"
-
+- id: untilNow
+  translation: "heden"
 
 - id: description
   translation: "Beschrijving"

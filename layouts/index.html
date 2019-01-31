@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ with resources.Get "css/cv.css" | minify }}
+{{ with resources.Get "css/cv.scss" | toCSS | minify }}
 <style>{{ .Content | safeCSS }}</style>
 {{ end }}
 <body class="container">
@@ -15,9 +15,9 @@
                     <div>
                         <h1>{{ .resume.basics.name }}</h1>
                         <small>{{ .resume.basics.summary }}</small><br>
-                        <small><strong>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;{{ .resume.basics.email }}</small>
-                        <small><strong>Website&nbsp;&nbsp;:</strong>&nbsp;&nbsp;{{ .resume.basics.website }}</small>
-                        <small><strong>LinkedIn&nbsp;:</strong>&nbsp;&nbsp;linkedin.com/in/{{ .resume.basics.linkedin }}</small>
+                        <small><strong>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;{{ .resume.basics.contact.email }}</small>
+                        <small><strong>LinkedIn&nbsp;:</strong>&nbsp;&nbsp;linkedin.com/in/{{ .resume.basics.contact.linkedin }}</small>
+                        <small><strong>Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;github.com/{{ .resume.basics.contact.github }}</small>
                     </div>
                 </div>
                 <img src="img/qr-code.png" alt="qr-code website">
@@ -33,54 +33,60 @@
                 {{ end }}
             </div>
         </header>
+        {{ if .resume.experience }}
         <section id="experience">
             <h2>{{ upper (i18n "experience") }}</h2>
-            {{ range .resume.work }}
+            {{ range .resume.experience }}
             <article>
-                <a href="http://{{ .website }}">
-                    <img src="img/ervaring_{{ .website }}" alt="Logo {{ .company }}">
+                <a {{if .website }} href="http://{{ .website }}" {{ end }}>
+                    <div class="square">{{ .companyName }}</div>
                 </a>
                 <div class="details">
                     <h3>{{ .position }}</h3>
-                    <big>{{ .company }}</big>
-                    <p>{{ .startDate }} - {{ .endDate }} {{ if not .location }} </p> {{ else }} | {{ .location }} </p > {{ end }}
+                    <p>{{ .startDate }} - {{ if .endDate }} {{ .endDate }} {{ else }} {{ i18n "untilNow" }} {{ end }}</p>
+                    <p> {{ .location }} </p>
                 </div>
                 <p class="description">{{ .summary }}</p>
             </article>
             {{ end }}
         </section>
+        {{ end }}
+        {{ if .resume.education }}
         <section id="education">
             <h2>{{ upper (i18n "education") }}</h2>
             <div id="cards">
                 {{ range .resume.education }}
-                <article>
+                <a href="http://{{ .website }}">
                     <div class="card">
-                        <a href="http://{{ .website }}">
-                            <img src="img/opleiding_{{ .website }}" alt="Logo {{ .institution }}">
-                        </a>
-                        <h3>{{ .area }}</h3>
-                        <big>{{ .institution }}</big>
-                        <p>{{ .startDate }} - {{ .endDate}}</p>
+                            <h3>{{ .institutionName }}</h3>
+                            <div>
+                                <p>{{ .area }}<br/>
+                                {{ .startDate }} - {{ if .endDate }} {{ .endDate }} {{ else }} {{ i18n "untilNow" }} {{ end }}</p>
+                            </div>
+                        
                     </div>
-                </article>
+                </a>
                 {{ end }}
             </div>
         </section>
+        {{ end }}
+        <div class="page-break" width="100px" height="100px">
+        </div>
+        {{ if .resume.knowledgeAndSkills }}
         <section id="skills">
             <h2>{{ upper (i18n "skillsAndKnowledge") }}</h2>
             <table>
                 <thead>
-
                     <tr>
                         <th id="domeinColumn">{{ i18n "domain" }}</th>
-                        <th id="specificationColumn">{{ i18n "specific" }}</th>
                         <th id="knowledgeLevelColumn">{{ i18n "proficiencyLevel" }}</th>
+                        <th id="specificationColumn"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- for each cateogory of skill -->
                     {{ $.Scratch.Add "i" 0 }}
-                    {{ range .resume.skills }}
+                    {{ range .resume.knowledgeAndSkills.knowledge }}
                         {{ $scopeSkill := . }}
                         {{ range first 1 .skillsets }}
                             <tr>
@@ -92,14 +98,15 @@
                                         <th rowspan="{{ len .skillsets }}">{{ .category }}</th>
                                     {{ end }}
                                 {{ end }}
-                                <td>{{ delimit .subskills ", " }}</td>
                                 <td>{{ .level }}</td>
+                                <td>{{ delimit .subskills ", " }}</td>
+                                
                             </tr>
                         {{ end }}
                         {{ range after 1 .skillsets }}
                             <tr>
-                                <td>{{ delimit .subskills ", " }}</td>
                                 <td>{{ .level }}</td>
+                                <td>{{ delimit .subskills ", " }}</td>
                             </tr>
                         {{ end }}
                         {{ $.Scratch.Add "i" 1 }}
@@ -109,24 +116,31 @@
             {{ if ne .Site.Language.Lang "en" }}
             <style>
                 @media (max-width : 537px) {
-                    td:nth-of-type(1):before { content: "{{ i18n "specific" }}" }
-                    td:nth-of-type(2):before { content: "{{ i18n "proficiencyLevel" }}" }
+                    td:nth-of-type(2):before { content: "{{ i18n "specific" }}" }
+                    td:nth-of-type(1):before { content: "{{ i18n "proficiencyLevel" }}" }
                 }
             </style>
             {{ end }}
+            {{ range .resume.knowledgeAndSkills.skills }}
+                <div>+ {{ . }}</div>
+            {{ end }}
         </section>
+        {{ end }}
+        {{ if .resume.interests }}
         <section id="interests">
             <h2>{{ upper (i18n "interests") }}</h2>
             <div>
                 {{ range .resume.interests }}
-                <div>{{ . }}</div>
+                <div class="diamond">
+                    <div class="diamond-text">{{ . }}</div>
+                </div>
                 {{ end }}
             </div>
         </section>
         {{ end }}
+        {{ end }}
     </div>
-    {{ partial "footer.html" . }}
-    {{ $printStyle := resources.Get "css/print.css" | minify}}
+    {{ $printStyle := resources.Get "css/print.scss" | toCSS | minify}}
     <link rel="stylesheet" href="{{ $printStyle.RelPermalink }}" media="print"/>
 </body>
 

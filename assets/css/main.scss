@@ -1,0 +1,275 @@
+@import './normalize.scss';
+@import './variables.scss';
+
+// GENERAL
+/* #region */
+
+// normal
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+         url('../fonts/source-sans-pro-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/source-sans-pro-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+  
+// bold
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: fallback;
+    src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+         url('../fonts/source-sans-pro-v11-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/source-sans-pro-v11-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    font-family: $font;
+    color: rgb(49, 51, 53);
+    background-color: rgb(245, 245, 245);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0em;
+}
+
+a, a:visited, a:active {
+    color: $white;
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 0.2em;
+}
+
+.btn {
+    background-color: $blueLight;
+    color: $white;
+    border: none;
+    padding: 0.5em;
+}
+
+.container {
+    display: flex;
+
+    @media screen and (max-width : $breakSmall) {
+        flex-direction: column;
+    }
+}
+
+.main {
+    background-color: $grayLight;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width : $breakSmall) {
+        padding: 1em;
+    }
+
+    header {
+        width: 92%;
+    }
+
+    section {
+        width: 90%;
+        background-color: $white;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        padding: 0em 1em 0em 1em;
+        border: 1px solid rgb(202, 204, 206);
+
+        @media screen and (max-width : $breakSmall) {
+            width: 95%;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+        
+        h2 {
+            margin-top: 0.4em;
+            margin-bottom: 0em;
+        }
+    }
+}
+/* #endregion */
+
+// SIDEBAR
+/* #region */
+nav {
+    background-color: $blueLight;  
+    position: sticky;
+    top: 0;
+    min-width: 10em;
+    max-width: 10em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width : $breakSmall) {
+        position: inherit;
+        height: auto;
+        max-width: inherit;
+    }
+
+    figcaption, small, a {
+        color: $white;
+    }
+
+    figure {
+        margin: 0em;
+        text-align: center; 
+        margin-bottom: 1em;  
+        display: flex;
+        flex-direction: column; 
+
+        @media screen and (max-width : $breakSmall) {
+            flex-direction: row; 
+            align-items: center;
+        }
+
+        #profilePicture {
+            width: 100%;
+
+            @media screen and (max-width : $breakSmall) {
+                max-height: 12em;
+            }
+
+            @media (max-height : 450px) {
+                /* remove picture if viewport is not heigh enough */
+                #profilePicture {
+                    display: none;
+                }
+            }
+        }
+
+        .profileDescription {
+            padding: 0.5em;
+
+            @media screen and (max-width : $breakSmall) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            figcaption {
+                padding: 0.5em;
+                font-weight: 700;
+            }
+        }
+    }
+
+    #menu {
+        background-color: $grayDark;    
+        width: 100%;
+
+        @media screen and (max-width : $breakSmall) {
+            margin-top: -1.3em;
+        }
+
+        ul {
+            margin-top: 0em;
+            margin-bottom: 0em;
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (max-width : $breakSmall) {
+                flex-direction: row;
+                justify-content: space-around;
+                text-align: center;
+            }
+
+            li {
+                margin: 0em;
+                padding: 0.3em;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-right: 0em;
+                @media screen and (max-width : $breakSmall) {
+                    width: 100%;
+                }
+                
+
+                &:nth-child(odd) {
+                    background-color: $gray;
+                }
+
+                a {
+                    display: block;
+                    width: 100%;
+                    padding: 0.3em 0.3em 0.3em 1em;
+
+                    @media screen and (max-width : $breakSmall) {
+                        padding-top: 0.6em;
+                        padding-bottom: 0.6em;
+                    }
+                }
+
+                .signet {
+                    min-height: 1.6em;
+                    width: 7%;
+                    height: 90%;
+
+                    &.active {
+                        background-color: $grayLight;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    #contact {
+        text-align: center;
+
+        li {
+            display: inline;  
+            margin-left: 0.5em;
+            margin-right: 0.5em; 
+            border-bottom:  solid 2px $blueLight;
+            
+            &:hover {
+                border-bottom: solid 2px $white;    
+            }
+
+            img {
+                width: 10%;
+
+                @media screen and (max-width : $breakSmall) {
+                    width: 5%;
+                }
+            }
+        }
+    }
+
+    #language {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2em;
+
+        @media screen and (max-width : $breakSmall) {
+            margin-bottom: 1em;
+        }
+
+        div {
+            display: inline-block;  
+            margin-right: 0.4em;
+            margin-left: 0.4em;
+            padding: 0.1em;
+
+            &.active_language {
+                border-bottom: solid 2px $white;        
+            }
+        }
+    }
+}
+/* #endregion */
