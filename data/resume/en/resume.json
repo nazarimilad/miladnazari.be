@@ -195,7 +195,8 @@
         {
           "name": "War over time",
           "description":  "Renders and animates territorial changes in Syria and Iraq during the Syrian civil war",
-          "skillsUsed": ["Perl", "Selenium", "Imagemagick"]
+          "skillsUsed": ["Perl", "Selenium", "Imagemagick"],
+          "source": "https://github.com/nazarimilad/war-over-time"
         }
       ]
     },
