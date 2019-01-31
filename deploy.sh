@@ -6,8 +6,9 @@ hugo
 /usr/bin/minify/minify -r public/ --url 'text/html' -o public/
 # print the PDF-verions of the CV
 hugo server -D &
-google-chrome --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/en/Milad-Nazari-en.pdf --no-margins file:///home/dodolord/Documents/Projecten/miladnazari.be/public/en/index.html
-google-chrome --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/nl/Milad-Nazari-nl.pdf --no-margins file:///home/dodolord/Documents/Projecten/miladnazari.be/public/nl/index.html
+sleep 2
+google-chrome --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/en/Milad-Nazari-en.pdf --no-margins http://localhost:1313/
+google-chrome --headless --disable-gpu --print-to-pdf=///home/dodolord/Documents/Projecten/miladnazari.be/public/nl/Milad-Nazari-nl.pdf --no-margins http://localhost:1314/
 PID=$!
 sleep 2
 kill $PID
