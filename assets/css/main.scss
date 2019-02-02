@@ -220,8 +220,6 @@ nav {
                     &.active {
                         background-color: $grayLight;
                     }
-
-
                 }
             }
         }
@@ -269,10 +267,12 @@ nav {
             display: inline-block;  
             margin-right: 0.4em;
             margin-left: 0.4em;
-            padding: 0.1em;
+            padding: 0.1em; 
+            font-weight: bold;
+            color: $white;
 
             &.active_language {
-                border-bottom: solid 2px $white;        
+                background-color: $orange;        
             }
         }
     }

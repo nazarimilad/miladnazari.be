@@ -69,11 +69,11 @@
     {{ if .Site.IsMultiLingual }}
         <div id="language">
             {{ if eq .Site.Language.Lang "en" }}
-                <div class="active_language"><a href="https://miladnazari.be">{{ upper .Site.Language.Lang }}</a></div>
+                <div class="active_language">{{ upper .Site.Language.Lang }}</div>
                 <div><a href="https://nl.miladnazari.be">NL</a></div>
             {{ else }}
                 <div><a href="https://miladnazari.be">EN</a></div>
-                <div class="active_language"><a href="https://nl.miladnazari.be">{{ upper .Site.Language.Lang }}</a></div>
+                <div class="active_language">{{ upper .Site.Language.Lang }}</div>
             {{ end }}
         </div>
     {{ end }}
