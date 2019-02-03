@@ -38,7 +38,7 @@ The webpages are rendered and minified with the static site generator Hugo. If y
 
 * The content tagged with the "print-only"-class are        currently rendered in the HTML and later removed/hidden   with CSS. If we could insert this content only when       someone has the intention to print the website, so when   print.min.css is loaded, it would reducte the size of     the index.html file. 
 
-* Add Blog HTML tempates
+* Add Blog HTML tempates. It's already possible to create   blog posts but they are not pretty and don't have the     same design as the homepage.
 
 ## Strucuture of generated website
 (see public/en/ or public/nl/)
@@ -46,3 +46,7 @@ The webpages are rendered and minified with the static site generator Hugo. If y
 * index.html: homepage, resume
 * projects/index.html: collection of projects I worked on
 * 404.html: HTML page for incorrect URL's or resources                not found
+
+## Prerequisites
+
+* Hugo 0.47 or higher
