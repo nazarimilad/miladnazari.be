@@ -9,9 +9,11 @@
         <header>
             <div class="print-only">
                 <div>
-                    <figure>
-                        <img src="img/profile.jpg" alt="profile foto" id="profilePictureSidebar">
-                    </figure>
+                    {{ if fileExists "static/img/profile.jpg" }}
+                        <figure>
+                            <img src="img/profile.jpg" alt="profile foto" id="profilePictureSidebar">
+                        </figure>
+                    {{ end }}
                     <div>
                         <h1>{{ .resume.basics.name }} | CV</h1>
                         <small>{{ .resume.basics.summary }}</small><br>
@@ -20,7 +22,9 @@
                         <small><strong>Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;github.com/{{ .resume.basics.contact.github }}</small>
                     </div>
                 </div>
-                <img src="img/qr-code.png" alt="qr-code website">
+                {{ if fileExists "static/img/qr-code.png" }}
+                    <img src="img/qr-code.png" alt="qr-code website">
+                {{ end }}
             </div>
             <div class="website-only">
                 <div class="website-only">

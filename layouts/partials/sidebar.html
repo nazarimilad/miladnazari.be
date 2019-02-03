@@ -1,9 +1,11 @@
 <nav class="website-only">
     <div>
         <figure>
-            <picture>
-                <img src="/img/profile.jpg" alt="profile foto" id="profilePicture">
-            </picture>
+            {{ if fileExists "static/img/profile.jpg" }}
+                <picture>
+                    <img src="/img/profile.jpg" alt="profile foto" id="profilePicture">
+                </picture>
+            {{ end }}
             <div class="profileDescription">
                 {{ with index .Site.Data.resume .Site.Language.Lang }}
                     <figcaption>{{ .resume.basics.name }}</figcaption>
