@@ -35,31 +35,29 @@
                     <ul>
                         {{ if .resume.basics.contact.email }}
                             <li>
-                                <a  href="mailto:{{ .resume.basics.contact.email }}">
+                                <a  href="mailto:{{ .resume.basics.contact.email }}" aria-label="Email">
                                         {{ readFile "static/img/email.svg" | safeHTML }}
                                 </a>
                             </li>
                         {{ end }}
                         {{ if .resume.basics.contact.email }}
                             <li>
-                                <a  href="{{ .Site.BaseURL }}/keys/publickey.{{ .resume.basics.contact.email }}.asc" download>
+                                <a  href="{{ .Site.BaseURL }}/keys/publickey.{{ .resume.basics.contact.email }}.asc" aria-label="Public key"download>
                                         {{ readFile "static/img/key.svg" | safeHTML }}
                                 </a>
                             </li>
                         {{ end }}
                         {{ if .resume.basics.contact.linkedin }}
                             <li>
-                                <a href="https://www.linkedin.com/in/{{ .resume.basics.contact.linkedin }}">
+                                <a href="https://www.linkedin.com/in/{{ .resume.basics.contact.linkedin }}" aria-label="Linkedin">
                                     {{ readFile "static/img/linkedin.svg" | safeHTML }}
-
                                 </a>
                             </li>
                         {{ end }}
                         {{ if .resume.basics.contact.github }}                        
                             <li>
-                                <a href="https://github.com/{{ .resume.basics.contact.github }}">
+                                <a href="https://github.com/{{ .resume.basics.contact.github }}" aria-label="Github">
                                     {{ readFile "static/img/github.svg" | safeHTML }}
-
                                 </a>
                             </li>
                         {{ end }}
