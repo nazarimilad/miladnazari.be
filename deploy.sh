@@ -7,7 +7,7 @@
 /usr/bin/google-chrome --headless --disable-gpu --screenshot=///home/dodolord/Documents/Projecten/miladnazari.be/readmeFiles/index.png --window-size=1330,1720 https://miladnazari.be/
 /usr/bin/google-chrome --headless --disable-gpu --screenshot=///home/dodolord/Documents/Projecten/miladnazari.be/readmeFiles/projects.png --window-size=1330,1720 https://miladnazari.be/projects
 /usr/bin/google-chrome --headless --disable-gpu --screenshot=///home/dodolord/Documents/Projecten/miladnazari.be/readmeFiles/pageNotFound.png --window-size=1330,1720 https://miladnazari.be/blabla
-convert -density 150 input.pdf[0] -quality 90 readmeFiles/latexPDF.png
+convert -density 150 public/en/resume/cv-en.pdf[0] -quality 90 readmeFiles/latexPDF.png
 
 # sync with git repository and hosting server
 git add .
