@@ -31,9 +31,9 @@
                     <h1>{{ i18n "curriculumVitae" }}</h1>
                 </div>
                 {{ if eq $.Site.Language.Lang "en" }}
-                    <a href="https://miladnazari.be/Milad-Nazari-{{ $.Site.Language.Lang }}.pdf" class="btn website-only" download><strong>.PDF</strong></a>
+                    <a href="https://miladnazari.be/cv-{{ $.Site.Language.Lang }}.pdf" class="btn website-only" download><strong>.PDF</strong></a>
                 {{ else }}
-                    <a href="https://nl.miladnazari.be/Milad-Nazari-{{ $.Site.Language.Lang }}.pdf" class="btn website-only" download><strong>.PDF</strong></a>
+                    <a href="https://nl.miladnazari.be/cv-{{ $.Site.Language.Lang }}.pdf" class="btn website-only" download><strong>.PDF</strong></a>
                 {{ end }}
             </div>
         </header>
@@ -50,7 +50,15 @@
                     <p>{{ .startDate }} - {{ if .endDate }} {{ .endDate }} {{ else }} {{ i18n "untilNow" }} {{ end }}</p>
                     <p> {{ .location }} </p>
                 </div>
-                <p class="description">{{ .summary }}</p>
+                <div class="description">
+                    <ul>
+                        {{ range .responsibilities}}
+                            <li>{{ . }}</li>
+                        {{ end }}
+                        <li class="skillsUsedLearned">{{ delimit .skillsUsedLearned ", " }}</li>
+                    </ul>
+
+                </div>
             </article>
             {{ end }}
         </section>
@@ -67,7 +75,6 @@
                                 <p>{{ .area }}<br/>
                                 {{ .startDate }} - {{ if .endDate }} {{ .endDate }} {{ else }} {{ i18n "untilNow" }} {{ end }}</p>
                             </div>
-                        
                     </div>
                 </a>
                 {{ end }}
@@ -125,22 +132,22 @@
                 }
             </style>
             {{ end }}
-            {{ range .resume.knowledgeAndSkills.skills }}
+            {{ range .resume.knowledgeAndSkills.other }}
                 <div>+ {{ . }}</div>
             {{ end }}
         </section>
         {{ end }}
         {{ if .resume.interests }}
-        <section id="interests">
-            <h2>{{ upper (i18n "interests") }}</h2>
-            <div>
-                {{ range .resume.interests }}
-                <div class="diamond">
-                    <div class="diamond-text">{{ . }}</div>
+            <section id="interests">
+                <h2>{{ upper (i18n "interests") }}</h2>
+                <div>
+                    {{ range .resume.interests }}
+                    <div class="diamond">
+                        <div class="diamond-text">{{ . }}</div>
+                    </div>
+                    {{ end }}
                 </div>
-                {{ end }}
-            </div>
-        </section>
+            </section>
         {{ end }}
         {{ end }}
     </div>

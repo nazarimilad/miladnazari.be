@@ -67,8 +67,11 @@ h1 {
     flex-direction: column;
     align-items: center;
 
+    width: 100%;
+
     @media screen and (max-width : $breakSmall) {
         padding: 1em;
+        width: 89%;
     }
 
     header {
@@ -272,7 +275,7 @@ nav {
             color: $white;
 
             &.active_language {
-                background-color: $orange;        
+                border-bottom: 0.3em solid $orange;      
             }
         }
     }

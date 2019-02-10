@@ -1,0 +1,141 @@
+{{ with index .Site.Data.resume .Site.Language.Lang }}
+    \documentclass[a4paper, twoside]{article}
+    \usepackage[default]{sourcesanspro}
+    \usepackage[margin=0.6in]{geometry}
+    \usepackage{amssymb}
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{graphicx}
+    \usepackage{float}
+    \usepackage{wrapfig}
+    \usepackage{hyperref}
+    \usepackage[dvipsnames, table]{xcolor}
+    \usepackage{setspace}
+    \usepackage{multirow}
+    \usepackage{booktabs}
+    \usepackage{multicol}
+    \setlength{\multicolsep}{1.0pt}
+    \usepackage{mdframed}
+    \usepackage{xcolor}
+    \usepackage{tabu}
+
+    \renewcommand{\labelitemi}{\color{blueLight}$\blacksquare$}
+    \renewcommand\labelitemii{$\square$}
+
+    \definecolor{blueLight}{RGB}{0, 119, 181}
+    \definecolor{blueDark}{RGB}{0, 75, 119}
+    \definecolor{gray}{RGB}{109, 111, 114}
+    \definecolor{grayBorder}{RGB}{202, 204, 206}
+    \definecolor{grayDark}{RGB}{49, 51, 53}
+    \definecolor{grayLight}{RGB}{245, 245, 245}
+    \definecolor{orange}{RGB}{216, 133, 78}
+    \definecolor{white}{RGB}{255, 255, 255}
+
+    \mdfsetup{
+        linecolor = blueLight,
+        outerlinewidth = 2pt,
+        skipabove = 0pt,
+        innertopmargin = -10pt,
+        innerbottommargin = 4pt,
+        innerrightmargin = 4pt,
+        innerleftmargin = 4pt,
+        leftmargin = 4pt,
+        rightmargin = 4pt,
+        rightline=false,
+        leftline=false,
+        backgroundcolor=blueLight
+    }
+
+    \title{Resume}
+    \author{ {{ .resume.basics.name }} }
+    \date{\today}
+    \pagenumbering{gobble}
+
+
+    \begin{document}
+
+    \begin{multicols}{2}
+        \setstretch{1.1}
+        \noindent{\textcolor{blueDark}{\textbf{\LARGE {{ .resume.basics.name }} | CV}}}\\
+        \noindent {{ .resume.basics.summary }}
+        \paragraph{}
+        \setstretch{0.6}
+        \hfill\noindent{\scriptsize E-mail: \quad\href{mailto:{{ .resume.basics.contact.email }} }{ {{ .resume.basics.contact.email }}}}\par
+        \hfill\noindent{\scriptsize Website: \href{https://{{ .resume.basics.contact.website }} }{ {{ .resume.basics.contact.email }} }}\par    
+        \hfill\noindent{\scriptsize LinkedIn: \href{https://{{ .resume.basics.contact.linkedin }} }{ {{ .resume.basics.contact.linkedin }} }}\par
+    \end{multicols}
+
+    {{ if .resume.experience }}
+        \begin{mdframed}
+            \section*{\textcolor{white}{ {{ humanize (i18n "experience") }} }}
+        \end{mdframed}
+
+        {{ range .resume.experience }}
+            \paragraph{\textbf{\textit{\href{https://{{ .website }} }{\textcolor{blueDark}{ {{ .companyName }} }}}}} \hfill\small {{ .location }} \\
+            {{ .position }} \hfill\small {{ .startDate }} - {{ if .endDate }} {{ .endDate }} {{ else }} {{ i18n "untilNow" }} {{ end }}
+            {{ if (gt (len .responsibilities) 0) or (gt (len .skillsUsedLearned) 0) }}
+                \begin{itemize}
+                    \itemsep-0.2em
+                    {{ range .responsibilities }}
+                        \item {{ . }}
+                    {{ end }}
+                    {{ if (gt (len .skillsUsedLearned) 0) }}
+                        \item[\color{orange}$\blacksquare$] {{ delimit .skillsUsedLearned ", " }}
+                    {{ end }}
+                \end{itemize}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ if .resume.education }}
+        \begin{mdframed}
+            \section*{\textcolor{white}{ {{ humanize (i18n "education") }} }}
+        \end{mdframed}
+
+        \begin{multicols}{ {{ len .resume.education}} }
+            {{ range .resume.education }}
+                \setlength{\parindent}{0pt}
+                \par
+                \textbf{\textit{\href{https://{{ .website }} }{\textcolor{blueDark}{ {{ .institutionName }} }}}}\\
+                {{ .area }}\\ \small {{ .startDate }} - {{ if .endDate }} {{ .endDate }} {{ else }} {{ i18n "untilNow" }} {{ end }}
+            {{ end }}
+        \end{multicols}
+    {{ end }}
+
+    {{ if .resume.knowledgeAndSkills }}
+        \begin{mdframed}
+            \section*{\textcolor{white}{ {{ humanize (i18n "skillsAndKnowledge") }} }}
+        \end{mdframed}
+
+        \taburulecolor{blueDark}
+        \noindent
+        \begin{tabu}{@{} c|l|l @{}}
+            \begin{tabular}{c|l|l @{}}
+                \cellcolor{blueDark}\textcolor{white}{\textbf{ {{ i18n "domain" }} }} & 
+                \cellcolor{blueDark}\textcolor{white}{\textbf{ {{ i18n "proficiencyLevel" }} }} & 
+                \cellcolor{blueDark}\\
+                {{ range .resume.knowledgeAndSkills.knowledge }}
+                    \multirow{ {{ len .skillsets }} }{*}{ {{ .category }} }
+                    {{ range .skillsets }}
+                        & {{ .level}} & {{ delimit .subskills ", " }} \\
+                    {{ end }}
+                    \hline
+                {{ end }}
+            \end{tabular}
+        \end{tabu}
+
+        \ignorespaces
+        \noindent + {{ delimit .resume.knowledgeAndSkills.other ", " }}
+    {{ end }}
+
+    {{ if .resume.interests }}
+        \begin{mdframed}
+            \section*{\textcolor{white}{ {{ humanize (i18n "interests") }} }}
+        \end{mdframed}
+
+        \noindent
+        {{ delimit .resume.interests ", " }}
+    {{ end }}
+
+    \end{document}
+{{ end }}

@@ -22,16 +22,22 @@
       "website": "codefever.be",
       "startDate": "01/02/2018",
       "location": "Gent",
-      "summary": "Lesgever assistentie. Aanleren van computationele concepten, algoritmen en web development aan kinderen van basisschool en middelbaar. Meehelpen bij oefeningen Scratch en Minecraft Education oefeningen."
+      "summary": "Lesgever assistentie. Aanleren van computationele concepten, algoritmen en web development aan kinderen van basisschool en middelbaar. Meehelpen bij oefeningen Scratch en Minecraft Education oefeningen.",
+      "responsibilities": ["Aanleren van computationele concepten, algoritmen en web development aan kinderen", 
+                           "Meehelpen met oefeningen projecten"],
+      "skillsUsedLearned": ["Scratch", "Minecraft Education", "HTML", "CSS", "Javascript", "Micro Bit"]
     },
     {
       "companyName": "VPK Packaging",
-      "position": "Support engineer & automation",
+      "position": "Support engineer en automatisatie",
       "website": "vpkgroup.com",
       "startDate": "01/08/2018",
       "endDate": "31/08/2018",
       "location": "Erembodegem",
-      "summary": "Technish support aan medewerkers en data-analyse automatisering a.d.h.v. Powershell, C# en Visual Basic."
+      "summary": "Technish support aan medewerkers en data-analyse automatisering a.d.h.v. Powershell, C# en Visual Basic.",
+      "responsibilities": ["Automatiseren van data analyse", 
+                           "Leveren van technisch support aan medewerkers"],
+      "skillsUsedLearned": ["Powershell", "C Sharp", "Visual Basic", "Excel", "Citrix"]
     },
     {
       "companyName": "UZ Brussel",
@@ -40,7 +46,9 @@
       "startDate": "02/07/2018",
       "endDate": "31/07/2018",
       "location": "Brussel",
-      "summary": "Agile Object-georienteerd software engineering in Java voor de ontwikkeling van het elektronisch patiëntendossier Primuz. Gebruik van design patterns en verschillende technologiën zoals Java EE, Hibernate, Vaadin, Maven, Jenkins en Hazelcast."
+      "summary": "Agile Object-georienteerd software engineering in Java voor de ontwikkeling van het elektronisch patiëntendossier Primuz. Gebruik van design patterns en verschillende technologiën zoals Java EE, Hibernate, Vaadin, Maven, Jenkins en Hazelcast.",
+      "responsibilities": ["Ontwikkelen van het elektronisch patiëntendossier Primuz"],
+      "skillsUsedLearned": ["Design patterns", "Agile", "OOP", "Java EE", "Hibernate", "Vaadin", "Maven", "Jenkins", "Hazelcast"]
     },
     {
       "companyName": "Spaceprint",
@@ -48,15 +56,10 @@
       "startDate": "01/06/2014",
       "endDate": "01/06/2016",
       "location": "Dendermonde",
-      "summary": "Ontwikkeling en onderhoud van zowel front-end als back-end, SEO, DNS-management, sociale marketing en tevens implementering van algoritmes voor STL-volumetrie."
-    },
-    {
-      "companyId": "Github",
-      "companyName": "Github, Gitlab",
-      "position": "Open source developer",
-      "website": "github.com",
-      "startDate": "01/07/2014",
-      "summary": "Ontwikkeling en documentering van open source programma's. Contributies en bug rapportering aan open source projecten op Github en Gitlab."
+      "summary": "Ontwikkeling en onderhoud van zowel front-end als back-end, SEO, DNS-management, sociale marketing en tevens implementering van algoritmes voor STL-volumetrie.",
+      "responsibilities": ["Ontwikkelen en onderhouden van zowel front-end als back-end", 
+                           "Implementeren van algoritmes voor STL-volumetrie"],
+      "skillsUsedLearned": ["HTML", "CSS", "Javascript", "JQuery", "Bootstrap", "PHP", "DNS", "SEO"]
     }
   ],
   "education": [
@@ -91,7 +94,7 @@
         "skillsets": [
           {
             "level": "Geavanceerd",
-            "subskills": ["Java", "C#"]
+            "subskills": ["Java", "C Sharp"]
           },
           {
             "level": "Gemiddeld",
@@ -117,7 +120,7 @@
         ]
       },
       {
-        "category": "Systeembeheer & DevOps",
+        "category": "Systeembeheer en DevOps",
         "skillsets": [
           {
             "level": "Geavanceerd",
@@ -182,9 +185,9 @@
         ]
       }
     ],
-    "skills": ["Rijbewijs B"]
+    "other": ["Rijbewijs B"]
   },
-  "interests": ["Computer Visie", "Machine Learning", "IOTA", "Data analyse", "Open source"],
+  "interests": ["Computer Visie", "Machine Learning", "IOTA", "Data analyse", "Open source software"],
   "projects": [
     {
       "category": "Data analyse",

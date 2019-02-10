@@ -2,7 +2,7 @@
   "basics": {
     "language": "en",
     "name": "Milad Nazari",
-    "summary": "Studious and passionated computer science student @ Hogent",
+    "summary": "Studious and passionated computer science student",
     "location": {
       "countryCode": "BE",
       "region": "East-Flanders"
@@ -22,16 +22,22 @@
       "website": "codefever.be",
       "startDate": "01/02/2018",
       "location": "Ghent",
-      "summary": "Assistant teacher. Teaching computational concepts, algoritmes and web development to children. Helping with Scratch and Minecraft Education exercices."
+      "summary": "Assistant teacher. . .",
+      "responsibilities": ["Teaching computational concepts, algoritmes and web development to children", 
+                           "Helping with exercices and projects"],
+      "skillsUsedLearned": ["Scratch", "Minecraft Education", "HTML", "CSS", "Javascript", "Micro Bit"]
     },
     {
       "companyName": "VPK Packaging",
-      "position": "Support engineer & automation",
+      "position": "Support engineer and automation",
       "website": "vpkgroup.com",
       "startDate": "01/08/2018",
       "endDate": "31/08/2018",
       "location": "Erembodegem",
-      "summary": "Technical support and data mining automation with Powershell, C# and Visual Basic."
+      "summary": "Technical support and data mining automation with Powershell, C# and Visual Basic.",
+      "responsibilities": ["Automating data analysis", 
+                           "Providing technical support to colleagues"],
+      "skillsUsedLearned": ["Powershell", "C Sharp", "Visual Basic", "Excel", "Citrix"]
     },
     {
       "companyName": "UZ Brussel",
@@ -40,7 +46,9 @@
       "startDate": "02/07/2018",
       "endDate": "31/07/2018",
       "location": "Brussels",
-      "summary": "Agile object oriented software engineering in Java for the development of the electronic patient record system Primuz. Usage of design patterns and several technologies such as Java EE, Hibernate, Vaadin, Maven, Jenkins and Hazelcast."
+      "summary": "Agile object oriented software engineering in Java for the development of the electronic patient record system Primuz. Usage of design patterns and several technologies such as Java EE, Hibernate, Vaadin, Maven, Jenkins and Hazelcast.",
+      "responsibilities": ["Development of the electronic patient record system Primuz"],
+      "skillsUsedLearned": ["Design patterns", "Agile", "OOP", "Java EE", "Hibernate", "Vaadin", "Maven", "Jenkins", "Hazelcast"]
     },
     {
       "companyName": "Spaceprint",
@@ -48,14 +56,10 @@
       "startDate": "01/06/2014",
       "endDate": "01/06/2016",
       "location": "Dendermonde",
-      "summary": "Development and maintenance of both front end and back and, SEO, DNS-management, social marketing and implementation of STL volumetry algorithms"
-    },
-    {
-      "companyName": "Github, Gitlab",
-      "position": "Open source developer",
-      "website": "github.com",
-      "startDate": "01/07/2014",
-      "summary": "Development and documentation of open source software. Contributions and bug reporting of open source projects on Github and Gitlab."
+      "summary": "Development and maintenance of both front end and back end, SEO, DNS-management, social marketing and implementation of STL volumetry algorithms",
+      "responsibilities": ["Development and maintenance of both front end and back end", 
+                           "Implementation of algoritmes for STL volumetry"],
+      "skillsUsedLearned": ["HTML", "CSS", "Javascript", "JQuery", "Bootstrap", "PHP", "DNS", "SEO"]
     }
   ],
   "education": [
@@ -90,7 +94,7 @@
         "skillsets": [
           {
             "level": "Advanced",
-            "subskills": ["Java", "C#"]
+            "subskills": ["Java", "C Sharp"]
           },
           {
             "level": "Intermediate",
@@ -116,7 +120,7 @@
         ]
       },
       {
-        "category": "System administration & DevOps",
+        "category": "System administration and DevOps",
         "skillsets": [
           {
             "level": "Advanced",
@@ -180,9 +184,9 @@
         ]
       }
     ],
-    "skills": ["Driver license"]
+    "other": ["Driver license"]
   },
-  "interests": ["Computer Vision", "Machine Learning", "IOTA", "Data analysis", "Open source"],
+  "interests": ["Computer Vision", "Machine Learning", "IOTA", "Data analysis", "Open source software"],
   "projects": [
     {
       "category": "Data analysis",

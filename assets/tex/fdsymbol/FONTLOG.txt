@@ -1,0 +1,61 @@
+FONTLOG for FdSymbol
+--------------------
+
+This file provides detailed information on the FdSymbol font family.
+This information should be distributed along with the FdSymbol fonts
+and any derivative works.
+
+
+Basic Font Information
+----------------------
+
+FdSymbol is a font of mathematical symbols designed as a companion to
+Typotheque's Fedra family, but it might also fit well to other contemporary
+typefaces.
+
+FdSymbol is derived from MnSymbol, designed and released into the public
+domain by Achim Blumensath.
+
+FdSymbol development is currently hosted on:
+http://github.com/ummels/fdsymbol
+
+
+ChangeLog
+---------
+
+17 Mar 2011 (Michael Ummels) FdSymbol version 1.000
+- First public release
+
+31 Mar 2011 (Michael Ummels) FdSymbol version 1.001
+- Added aleph, beth, daleth and gimel
+
+21 May 2011 (Michael Ummels) FdSymbol version 1.002
+- Optimised all glyphs
+
+30 May 2011 (Michael Ummels) FdSymbol version 1.003
+- Optimised negation strokes and some other glyphs
+
+27 Aug 2011 (Michael Ummels) FdSymbol version 1.004
+- Added many more glyphs and optimised turnstile glyphs
+
+1 Nov 2011 (Michael Ummels) FdSymbol version 1.005
+- First release in OpenType format
+- Added sans-serif variants of large operators
+
+2 Nov 2011 (Michael Ummels) FdSymbol version 1.006
+- Fixed unsmooth curve in summation sign
+
+6 Nov 2011 (Michael Ummels) FdSymbol version 1.007
+- Modified integral sign
+
+26 May 2012 (Michael Ummels) FdSymbol version 1.008
+- Added vertically centered radicals
+
+Acknowledgements
+-------------------------
+(Here is where contributors can be acknowledged. If you make modifications be sure to add your name (N), email (E), web-address (W) and description (D). This list is sorted by last name in alphabetical order.)
+
+N: Michael Ummels
+E: michael.ummels@rwth-aachen.de
+W: http://www.ummels.de
+D: Original Designer
