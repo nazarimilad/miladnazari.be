@@ -47,7 +47,14 @@
                 </a>
                 <div class="details">
                     <h3>{{ .position }}</h3>
-                    <p>{{ .startDate }} - {{ if .endDate }} {{ .endDate }} {{ else }} {{ i18n "untilNow" }} {{ end }}</p>
+                    <p>
+                        {{ index (index $.Site.Data.months $.Site.Language.Lang) (printf "%d" (time .startDate).Month) }} {{ (time .startDate).Year }} 
+                        {{ if not .endDate }}
+                            - {{ i18n "untilNow" }}
+                        {{ else if (or (ne (time .startDate).Month (time .startDate).Month) (ne (time .startDate).Year (time .endDate).Year)) }}
+                            - {{ index (index $.Site.Data.months $.Site.Language.Lang) (printf "%d" (time .endDate).Month) }} {{ (time .endDate).Year }}
+                        {{ end }}
+                    </p>
                     <p> {{ .location }} </p>
                 </div>
                 <div class="description">
