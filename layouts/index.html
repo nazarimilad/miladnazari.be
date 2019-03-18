@@ -90,6 +90,7 @@
         {{ if .resume.knowledgeAndSkills }}
         <section id="skills">
             <h2>{{ upper (i18n "skillsAndKnowledge") }}</h2>
+            
             <table>
                 <thead>
                     <tr>
@@ -129,12 +130,12 @@
                 </tbody>
             </table>
             {{ if ne .Site.Language.Lang "en" }}
-            <style>
-                @media (max-width : 537px) {
-                    td:nth-of-type(2):before { content: "{{ i18n "specific" }}" }
-                    td:nth-of-type(1):before { content: "{{ i18n "proficiencyLevel" }}" }
-                }
-            </style>
+                <style>
+                    @media (max-width : 540px) {
+                        section#skills table tr td:nth-of-type(1)::before { content: "{{ i18n "proficiencyLevel" }}" }
+                        section#skills table tr td:nth-of-type(2)::before { content: "{{ i18n "specific" }}" }
+                    }
+                </style>
             {{ end }}
             {{ range .resume.knowledgeAndSkills.other }}
                 <div>+ {{ . }}</div>

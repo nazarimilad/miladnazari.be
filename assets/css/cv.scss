@@ -97,7 +97,8 @@ section {
     
         .description {
             width: 50%;
-            padding: 1em;
+            padding-left: 1em;
+            padding-right: 1em;
     
             @media screen and (max-width : $breakSmall) {
                 width: 90%;
@@ -138,10 +139,6 @@ section {
             a {
                 &:nth-child(1) .card {
                     background: linear-gradient(to right, $orange 3%, $blueLight 3%);
-    
-                    @media screen and (max-width : $breakSmall) {
-                        background: linear-gradient(to right, $orange 4%, $blueLight 4%);
-                    }
                 }
     
                 .card {
@@ -254,8 +251,8 @@ section {
                             white-space: nowrap;
                         }
     
-                        &:nth-of-type(1):before { content: "Specific"; }
-                        &:nth-of-type(2):before { content: "Proficiency Level"; }
+                        &:nth-of-type(1):before { content: "Proficiency Level"; }
+                        &:nth-of-type(2):before { content: "Specific"; }
                     }
                 }
             }
@@ -290,14 +287,7 @@ section {
                 transform:rotate(45deg);
                 height: 5em;
                 width: 5em;
-    
-                &:nth-child(odd) {
-                    background-color: $blueLight;
-                }
-            
-                &:nth-child(even) {
-                    background-color: $grayDark;
-                }
+                background-color: $blueLight;
     
                 .diamond-text {
                     display: table-cell;
