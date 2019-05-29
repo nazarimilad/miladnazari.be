@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # generate, render and minify every html page
 hugo --minify
 

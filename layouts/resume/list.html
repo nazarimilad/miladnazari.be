@@ -59,10 +59,15 @@
         \noindent{\textcolor{blueDark}{\textbf{\LARGE {{ .resume.basics.name }} | CV}}}\\
         \noindent {{ .resume.basics.summary }}
         \paragraph{}
-        \setstretch{0.6}
-        \hfill\noindent{\scriptsize E-mail: \quad\href{mailto:{{ .resume.basics.contact.email }} }{ {{ .resume.basics.contact.email }}}}\par
-        \hfill\noindent{\scriptsize Website: \href{https://{{ .resume.basics.contact.website }} }{ {{ .resume.basics.contact.website }} }}\par    
-        \hfill\noindent{\scriptsize LinkedIn: \href{https://{{ .resume.basics.contact.linkedin }} }{ linkedin.com/in/{{ .resume.basics.contact.linkedin }} }}\par
+        \setstretch{0.9}
+        {\small
+            \hfill
+            \begin{tabular}{rr}
+                \textcolor{blueDark}{E-mail:} & \href{ mailto:{{ .resume.basics.contact.email }} }{ {{ .resume.basics.contact.email }} } \\
+                \textcolor{blueDark}{Website:} &  \href{ https://{{ .resume.basics.contact.website }} }{ {{ .resume.basics.contact.website }} } \\
+                \textcolor{blueDark}{LinkedIn}: &  \href{ https://linkedin.com/in/{{ .resume.basics.contact.linkedin }} }{ linkedin.com/in/{{ .resume.basics.contact.linkedin }} }
+            \end{tabular}
+        }
     \end{multicols}
 
     {{ if .resume.experience }}
@@ -73,7 +78,7 @@
         {{ range .resume.experience }}
             \paragraph{\textbf{\textit{\href{https://{{ .website }} }{\textcolor{blueDark}{ {{ .companyName }} }}}}} \hfill\small {{ .location }} \\
             {{ .position }} \hfill\small
-            {{ index (index $.Site.Data.months $.Site.Language.Lang) (printf "%d" (time .startDate).Month) }} {{ (time .startDate).Year }} 
+            {{ index (index $.Site.Data.months $.Site.Language.Lang) (printf "%d" (time .startDate).Month) }} {{ (time .startDate).Year }}
             {{ if not .endDate }}
                 - {{ i18n "untilNow" }}
             {{ else if (or (ne (time .startDate).Month (time .startDate).Month) (ne (time .startDate).Year (time .endDate).Year)) }}
@@ -117,8 +122,8 @@
         \noindent
         \begin{tabu}{@{} c|l|l @{}}
             \begin{tabular}{c|l|l @{}}
-                \cellcolor{blueDark}\textcolor{white}{\textbf{ {{ i18n "domain" }} }} & 
-                \cellcolor{blueDark}\textcolor{white}{\textbf{ {{ i18n "proficiencyLevel" }} }} & 
+                \cellcolor{blueDark}\textcolor{white}{\textbf{ {{ i18n "domain" }} }} &
+                \cellcolor{blueDark}\textcolor{white}{\textbf{ {{ i18n "proficiencyLevel" }} }} &
                 \cellcolor{blueDark}\\
                 {{ range .resume.knowledgeAndSkills.knowledge }}
                     \multirow{ {{ len .skillsets }} }{*}{ {{ .category }} }

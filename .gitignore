@@ -1,2 +1,4 @@
 google*
 .vscode/*
+.idea/*
+.directory

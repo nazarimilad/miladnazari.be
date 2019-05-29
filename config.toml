@@ -1,5 +1,6 @@
 # Hostname (and path) to the root
-baseURL = "https://miladnazari.be/"
+baseurl = ""
+
 # Default pagination every X items
 Paginate = 10
 # Enable this to make all relative URLs relative to content
