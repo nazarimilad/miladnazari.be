@@ -28,6 +28,18 @@
       "skillsUsedLearned": ["Scratch", "Minecraft Education", "HTML", "CSS", "Javascript", "Micro Bit"]
     },
     {
+      "companyName": "Western Digital/Amplidata",
+      "position": "Junior software engineer",
+      "website": "westerndigital.com",
+      "startDate": "2019-06-24",
+      "endDate": "2019-08-02",
+      "location": "Ghent",
+      "summary": "Ontwerp en ontwikkeling van een automatisch root cause analysis oplossing.",
+      "responsibilities": ["Ontwerp en ontwikkeling van een automatisch RCA oplossing", 
+                           "Ontwikkling van API voor RCA batch services"],
+      "skillsUsedLearned": ["Python", "Data analyse", "Multi processing", "Scikit Learn", "Batch processing", "Jenkins"]
+    },
+    {
       "companyName": "VPK Packaging",
       "position": "Support engineer",
       "website": "vpkgroup.com",
