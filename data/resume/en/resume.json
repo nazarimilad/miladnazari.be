@@ -156,11 +156,11 @@
           },
           {
             "level": "Intermediate",
-            "subskills": ["XML", "MySQL"]
+            "subskills": ["XML", "MySQL", "Big Data", "Pandas", "Numpy", "Scikit Learn"]
           },
           {
             "level": "Basic knowledge",
-            "subskills": ["Big Data", "MongoDB", "PowerBI", "Pandas", "Numpy", "Scikit-Learn"]
+            "subskills": ["MongoDB", "PowerBI", "Elasticsearch"]
           }
         ]
       },

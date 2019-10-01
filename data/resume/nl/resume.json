@@ -157,12 +157,11 @@
           },
           {
             "level": "Gemiddeld",
-            "subskills": ["XML", "MySQL"]
+            "subskills": ["XML", "MySQL", "Big Data", "Pandas", "Numpy", "Scikit Learn"]
           },
           {
             "level": "Basiskennis",
-            "subskills": ["Big Data", "MongoDB", "PowerBI", "Pandas", "Numpy", "Scikit-Learn"
-            ]
+            "subskills": ["MongoDB", "PowerBI", "Elasticsearch"]
           }
         ]
       },
