@@ -7,7 +7,7 @@
       "countryCode": "BE",
       "region": "East-Flanders"
     },
-    "careerStatus": "Assistent teacher @CodeFever",
+    "careerStatus": "Teacher @CodeFever",
     "contact": {
       "email": "contact@miladnazari.be",
       "linkedin": "miladnazari",
@@ -26,6 +26,17 @@
       "responsibilities": ["Teaching computational concepts, algoritmes and web development to children", 
                            "Helping with exercices and projects"],
       "skillsUsedLearned": ["Scratch", "Minecraft Education", "HTML", "CSS", "Javascript", "Micro Bit"]
+    },
+    {
+      "companyName": "Western Digital/Amplidata",
+      "position": "Junior software engineer",
+      "website": "westerndigital.com",
+      "startDate": "2019-06-24",
+      "endDate": "2019-09-02",
+      "location": "Ghent",
+      "summary": "Design and implementation of an automated root cause analysis solution.",
+      "responsibilities": ["Design and implementation of an automated RCA solution", "Development of API for RCA batch service"],
+      "skillsUsedLearned": ["Python", "Data analysis", "Multi processing", "Scikit Learn", "Batch processing", "Jenkins"]
     },
     {
       "companyName": "VPK Packaging",

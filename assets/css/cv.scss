@@ -13,13 +13,13 @@ header {
 }
 
 section {
-    h2 {
+    &> h2 {
         @media screen and (max-width : $breakSmall) {
             text-align: center;
         }
     }
 
-    &#experience  article {
+    &#experience > article {
         border-bottom: 1px solid $grayBorder;
         display: flex;
         flex-wrap: wrap;
