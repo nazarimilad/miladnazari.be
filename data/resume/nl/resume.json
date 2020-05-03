@@ -17,6 +17,22 @@
   },
   "experience": [
     {
+      "companyName": "IBM",
+      "position": "Stagiair Software Engineering",
+      "website": "https://www.ibm.com",
+      "startDate": "2020-02-01",
+      "endDate": "2020-05-29",
+      "location": "Böblingen, Baden-Württemberg, Germany",
+      "summary": "Software en data engineering in een Scrum Agile team voor Master Data Management",
+      "responsibilities": ["Evalueren en implementeren van business process engines in een microservice omgeving",
+                            "Debuggen en verbeteren van MDM (Master Data Management) software voor Salesforce",
+                            "Ontwerpen en ontwikkelen van een modulair End-to-End machine learning service",
+                            "Werken in een Agile Scrum team",
+                            "Voorstellen van nieuwe technologieën en technologie evaluaties and aanbevelingen voor toekomstige projecten",
+                            "Volgen van cursusen, zoals Data Privacy Training, Cyber Security Education, Business Conduct Guidelines, en meer"],
+      "skillsUsedLearned": ["Java", "Python", "C", "Docker", "Kubernetes", "Tensorflow", "Flowable"]
+    },
+    {
       "companyName": "Codefever",
       "position": "Lesgever assistent",
       "website": "codefever.be",
@@ -140,11 +156,11 @@
           },
           {
             "level": "Gemiddeld",
-            "subskills": ["Linux", "Apache"]
+            "subskills": ["Linux", "Apache", "Docker"]
           },
           {
             "level": "Basiskennis",
-            "subskills": ["Windows Server", "Powershell"]
+            "subskills": ["Windows Server", "Powershell", "Kubernetes"]
           }
         ]
       },
@@ -161,7 +177,7 @@
           },
           {
             "level": "Basiskennis",
-            "subskills": ["MongoDB", "PowerBI", "Elasticsearch"]
+            "subskills": ["MongoDB", "PowerBI", "Elasticsearch", "Tensorflow"]
           }
         ]
       },
@@ -174,7 +190,11 @@
           },
           {
             "level": "Gemiddeld",
-            "subskills": ["SaSS", "Javascript", "ASP.NET", "Hugo"]
+            "subskills": ["SaSS", "Javascript", "ASP.NET", "Hugo", "Angular"]
+          },
+          {
+            "level": "Basiskennis",
+            "subskills": ["React"]
           }
         ]
       },
@@ -198,7 +218,7 @@
     ],
     "other": ["Rijbewijs B"]
   },
-  "interests": ["Computer Visie", "Machine Learning", "IOTA", "Data analyse", "Open source software"],
+  "interests": ["Computer Visie", "Machine Learning", "Automatisatie", "Data analyse", "Open source software", "Lopen"],
   "projects": [
     {
       "category": "Data analyse",

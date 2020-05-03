@@ -17,6 +17,22 @@
   },
   "experience": [
     {
+      "companyName": "IBM",
+      "position": "Software engineer intern",
+      "website": "https://www.ibm.com",
+      "startDate": "2020-02-01",
+      "endDate": "2020-05-29",
+      "location": "Böblingen, Baden-Württemberg, Germany",
+      "summary": "Software and data engineering in a Scrum Agile team for Master Data Management",
+      "responsibilities": ["Evaluation and implementation of business process engines in a microservice environment",
+						    "Debugging and improving MDM (Master Data Management) software for Salesforce",
+							"Designing a scalable, modular and maintainable End-to-end machine learning service",
+							"Working in a Agile Scrum team",
+                            "Presenting new technologies and technology evaluations and recommendations for future projects",
+							"Participation in courses such as Data Privacy Training, Cyber Security Education, Business Conduct Guidelines, and more"],
+      "skillsUsedLearned": ["Java", "Python", "C", "Docker", "Kubernetes", "Tensorflow", "Flowable"]
+    },
+    {
       "companyName": "Codefever",
       "position": "Assistant teacher",
       "website": "codefever.be",
@@ -139,11 +155,11 @@
           },
           {
             "level": "Intermediate",
-            "subskills": ["Linux", "Apache"]
+            "subskills": ["Linux", "Apache", "Docker"]
           },
           {
             "level": "Basic knowledge",
-            "subskills": ["Windows Server", "Powershell"]
+            "subskills": ["Windows Server", "Powershell", "Kubernetes"]
           }
         ]
       },
@@ -160,7 +176,7 @@
           },
           {
             "level": "Basic knowledge",
-            "subskills": ["MongoDB", "PowerBI", "Elasticsearch"]
+            "subskills": ["MongoDB", "PowerBI", "Elasticsearch", "Tensorflow"]
           }
         ]
       },
@@ -173,7 +189,11 @@
           },
           {
             "level": "Intermediate",
-            "subskills": ["SaSS", "Javascript", "ASP.NET", "Hugo"]
+            "subskills": ["SaSS", "Javascript", "ASP.NET", "Angular", "Hugo"]
+          },
+          {
+            "level": "Basic knowledge",
+            "subskills": ["React"]
           }
         ]
       },
@@ -197,7 +217,7 @@
     ],
     "other": ["Driver license"]
   },
-  "interests": ["Computer Vision", "Machine Learning", "IOTA", "Data analysis", "Open source software"],
+  "interests": ["Computer Vision", "Machine Learning", "Automation", "Data analysis", "Open source software", "Running"],
   "projects": [
     {
       "category": "Data analysis",
