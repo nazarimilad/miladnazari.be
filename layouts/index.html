@@ -7,22 +7,6 @@
     <div class="main">
         {{ with index .Site.Data.resume .Site.Language.Lang }}
         <header>
-            <div class="print-only">
-                <div>
-                    {{ if fileExists "static/img/profile.jpg" }}
-                        <figure>
-                            <img src="img/profile.jpg" alt="profile foto" id="profilePictureSidebar">
-                        </figure>
-                    {{ end }}
-                    <div>
-                        <h1>{{ .resume.basics.name }} | CV</h1>
-                        <small>{{ .resume.basics.summary }}</small><br>
-                        <small><strong>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;{{ .resume.basics.contact.email }}</small>
-                        <small><strong>LinkedIn&nbsp;:</strong>&nbsp;&nbsp;linkedin.com/in/{{ .resume.basics.contact.linkedin }}</small>
-                        <small><strong>Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;github.com/{{ .resume.basics.contact.github }}</small>
-                    </div>
-                </div>
-            </div>
             <div class="website-only">
                 <div class="website-only">
                     <h1>{{ i18n "curriculumVitae" }}</h1>
@@ -156,8 +140,6 @@
         {{ end }}
         {{ end }}
     </div>
-    {{ $printStyle := resources.Get "css/print.scss" | toCSS | minify}}
-    <link rel="stylesheet" href="{{ $printStyle.RelPermalink }}" media="print"/>
 </body>
 
 </html>

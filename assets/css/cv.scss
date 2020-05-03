@@ -1,10 +1,6 @@
 @import './variables.scss';
 
 header {
-    &>.print-only {
-        display: none;
-    }
-
     &>.website-only {
         display: flex;
         justify-content: space-between;
